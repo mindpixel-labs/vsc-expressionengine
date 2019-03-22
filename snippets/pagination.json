@@ -1,0 +1,38 @@
+{
+  "{paginate}{pagination_links}{/paginate}": {
+    "scope": "html.ee",
+    "prefix": "pagination-links",
+    "body": [
+      "{paginate}",
+      "\t{pagination_links}",
+      "{/paginate}"
+    ]
+  },
+  "Pagination Boilerplate": {
+    "scope": "html.ee",
+    "prefix": "paginate-pair",
+    "body": [
+      "{paginate}",
+      "\t{pagination_links}",
+      "\t\t<ul>",
+      "\t\t\t{first_page}",
+      "\t\t\t\t<li><a href=\"{pagination_url}\"class=\"page-first\">First Page<a></li>",
+      "\t\t\t{/first_page}\n",
+      "\t\t\t{previous_page}",
+      "\t\t\t\t<li><a href=\"{pagination_url}\"class=\"page-previous\">Previous Page</a></li>",
+      "\t\t\t{/previous_page}\n",
+      "\t\t\t{page}",
+      "\t\t\t\t<li><a href=\"{pagination_url}\" class=\"page-{pagination_page_number}{if current_page}active{/if}\">{pagination_page_number}</a></li>",
+      "\t\t\t{/page}\n",
+      "\t\t\t{next_page}",
+      "\t\t\t\t<li><a href=\"{pagination_url}\" class=\"page-next\">Next Page<a><li>",
+      "\t\t\t{/next_page}\n",
+      "\t\t\t{last_page}",
+      "\t\t\t\t<li><a href=\"{pagination_url}\" class=\"page-last\">Last Page<a></li>",
+      "\t\t\t{/last_page}",
+      "\t\t</ul>",
+      "\t{/pagination_links}",
+      "{/paginate}"
+    ]
+  }
+}

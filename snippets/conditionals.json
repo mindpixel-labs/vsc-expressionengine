@@ -1,0 +1,24 @@
+{
+  "{if condition}...{/if}": {
+    "scope": "html.ee",
+    "prefix": "if",
+    "body": [
+      "{if $1}",
+      "\t$0",
+      "{/if}"
+    ],
+    "description": "Add initial conditional statement"
+  },
+  "{if:elseif}": {
+    "scope": "html.ee",
+    "prefix": "elseif",
+    "body": ["{if:elseif $1}"],
+    "description": "Add another conditional check"
+  },
+  "{if:else}": {
+    "scope": "html.ee",
+    "prefix": "else",
+    "body": ["{if:else}"],
+    "description": "Add control structure"
+  }
+}

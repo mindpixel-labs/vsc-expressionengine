@@ -1,0 +1,232 @@
+{
+  "author_id": {
+    "scope": "html.ee",
+    "prefix": "author_id",
+    "body": "author_id"
+  },
+  "backspace": {
+    "scope": "html.ee",
+    "prefix": "backspace",
+    "body": "backspace"
+  },
+  "cat_limit": {
+    "scope": "html.ee",
+    "prefix": "cat_limit",
+    "body": "cat_limit"
+  },
+  "category": {
+    "scope": "html.ee",
+    "prefix": "category",
+    "body": "category"
+  },
+  "category_group": {
+    "scope": "html.ee",
+    "prefix": "category_group",
+    "body": "category_group"
+  },
+  "channel": {
+    "scope": "html.ee",
+    "prefix": "channel",
+    "body": "channel"
+  },
+  "count": {
+    "scope": "html.ee",
+    "prefix": "count",
+    "body": "count"
+  },
+  "disable": {
+    "scope": "html.ee",
+    "prefix": "disable",
+    "body": "disable"
+  },
+  "display_by": {
+    "scope": "html.ee",
+    "prefix": "display_by",
+    "body": "display_by"
+  },
+  "dynamic": {
+    "scope": "html.ee",
+    "prefix": "dynamic",
+    "body": "dynamic"
+  },
+  "dynamic_parameters": {
+    "scope": "html.ee",
+    "prefix": "dynamic_parameters",
+    "body": "dynamic_parameters"
+  },
+  "dynamic_start": {
+    "scope": "html.ee",
+    "prefix": "dynamic_start",
+    "body": "dynamic_start"
+  },
+  "entry_id": {
+    "scope": "html.ee",
+    "prefix": "entry_id",
+    "body": "entry_id"
+  },
+  "entry_id_from": {
+    "scope": "html.ee",
+    "prefix": "entry_id_from",
+    "body": "entry_id_from"
+  },
+  "entry_id_to": {
+    "scope": "html.ee",
+    "prefix": "entry_id_to",
+    "body": "entry_id_to"
+  },
+  "fixed_order": {
+    "scope": "html.ee",
+    "prefix": "fixed_order",
+    "body": "fixed_order"
+  },
+  "group_id": {
+    "scope": "html.ee",
+    "prefix": "group_id",
+    "body": "group_id"
+  },
+  "limit": {
+    "scope": "html.ee",
+    "prefix": "limit",
+    "body": "limit"
+  },
+  "month_limit": {
+    "scope": "html.ee",
+    "prefix": "month_limit",
+    "body": "month_limit"
+  },
+  "offset": {
+    "scope": "html.ee",
+    "prefix": "offset",
+    "body": "offset"
+  },
+  "orderby": {
+    "scope": "html.ee",
+    "prefix": "orderby",
+    "body": "orderby"
+  },
+  "page_url": {
+    "scope": "html.ee",
+    "prefix": "page_url",
+    "body": "page_url"
+  },
+  "paginate": {
+    "scope": "html.ee",
+    "prefix": "paginate",
+    "body": "paginate"
+  },
+  "paginate_base": {
+    "scope": "html.ee",
+    "prefix": "paginate_base",
+    "body": "paginate_base"
+  },
+  "paginate_type": {
+    "scope": "html.ee",
+    "prefix": "paginate_type",
+    "body": "paginate_type"
+  },
+  "related_categories_mode": {
+    "scope": "html.ee",
+    "prefix": "related_categories_mode",
+    "body": "related_categories_mode"
+  },
+  "relaxed_categories": {
+    "scope": "html.ee",
+    "prefix": "relaxed_categories",
+    "body": "relaxed_categories"
+  },
+  "require_entry": {
+    "scope": "html.ee",
+    "prefix": "require_entry",
+    "body": "require_entry"
+  },
+  "search: field_name": {
+    "scope": "html.ee",
+    "prefix": "search: field_name",
+    "body": "search: field_name"
+  },
+  "show_current_week": {
+    "scope": "html.ee",
+    "prefix": "show_current_week",
+    "body": "show_current_week"
+  },
+  "show_expired": {
+    "scope": "html.ee",
+    "prefix": "show_expired",
+    "body": "show_expired"
+  },
+  "show_future_entries": {
+    "scope": "html.ee",
+    "prefix": "show_future_entries",
+    "body": "show_future_entries"
+  },
+  "show_pages": {
+    "scope": "html.ee",
+    "prefix": "show_pages",
+    "body": "show_pages"
+  },
+  "site_url": {
+    "scope": "html.ee",
+    "prefix": "site_url",
+    "body": "site_url"
+  },
+  "start_day": {
+    "scope": "html.ee",
+    "prefix": "start_day",
+    "body": "start_day"
+  },
+  "start_on": {
+    "scope": "html.ee",
+    "prefix": "start_on",
+    "body": "start_on"
+  },
+  "status": {
+    "scope": "html.ee",
+    "prefix": "status",
+    "body": "status"
+  },
+  "sticky": {
+    "scope": "html.ee",
+    "prefix": "sticky",
+    "body": "sticky"
+  },
+  "stop_before": {
+    "scope": "html.ee",
+    "prefix": "stop_before",
+    "body": "stop_before"
+  },
+  "title": {
+    "scope": "html.ee",
+    "prefix": "title",
+    "body": "title"
+  },
+  "total_results": {
+    "scope": "html.ee",
+    "prefix": "total_results",
+    "body": "total_results"
+  },
+  "track_views": {
+    "scope": "html.ee",
+    "prefix": "track_views",
+    "body": "track_views"
+  },
+  "uncategorized_entries": {
+    "scope": "html.ee",
+    "prefix": "uncategorized_entries",
+    "body": "uncategorized_entries"
+  },
+  "url_title": {
+    "scope": "html.ee",
+    "prefix": "url_title",
+    "body": "url_title"
+  },
+  "username": {
+    "scope": "html.ee",
+    "prefix": "username",
+    "body": "username"
+  },
+  "week_sort": {
+    "scope": "html.ee",
+    "prefix": "week_sort",
+    "body": "week_sort"
+  }
+}

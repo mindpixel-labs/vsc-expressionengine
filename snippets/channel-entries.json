@@ -1,0 +1,12 @@
+{
+  "{exp:channel:entries channel=\"...\"}": {
+    "scope": "html.ee",
+    "prefix": "entries",
+    "body": [
+      "{exp:channel:entries channel=\"$1\"$2}",
+      "\t$0",
+      "{/exp:channel:entries}"
+    ],
+    "description": "Add path variable"
+  }
+}

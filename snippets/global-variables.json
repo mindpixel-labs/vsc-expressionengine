@@ -1,0 +1,33 @@
+{
+  "{embed=\"...\"}": {
+    "scope": "html.ee",
+    "prefix": "embed",
+    "body": ["{embed=\"$1\"}"],
+    "description": "Add embed variable"
+  },
+  "{encode=\"...\" title=\"...\"}": {
+    "scope": "html.ee",
+    "prefix": "encode",
+    "body": ["{encode=\"$1\" title=\"$2\"}"],
+    "description": "Add encode variable"
+  },
+  "{redirect=\"...\"}": {
+    "scope": "html.ee",
+    "prefix": "redirect",
+    "body": ["{redirect=\"$1\"}"
+    ],
+    "description": "Add redirect variable"
+  },
+  "{path=''}": {
+    "scope": "html.ee",
+    "prefix": "path",
+    "body": ["{path='$1'}"],
+    "description": "Add path variable"
+  },
+  "{route='...'}": {
+    "scope": "html.ee",
+    "prefix": "route",
+    "body": ["{route='$1'}"],
+    "description": "Add route variable"
+  }
+}

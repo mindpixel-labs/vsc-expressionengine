@@ -1,0 +1,74 @@
+{
+    "name": "vsc-expressionengine",
+    "displayName": "vsc-expressionengine",
+    "description": "The ultimate ExpressionEngine CMS extension for Visual Studio Code with syntax highlighting and snippets.",
+    "publisher": "mindpixel-labs",
+    "version": "0.0.1",
+    "license": "MIT",
+    "icon": "docs/images/vsc-ee-icon.png",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+	"repository": {
+	    "type": "git",
+	    "url": "https://github.com/mindpixel-labs/vsc-expressionengine.git"
+    },
+	"bugs": {
+	    "url": "https://github.com/mindpixel-labs/vsc-expressionengine/issues"
+	},
+    "contributes": {
+        "languages": [{
+            "id": "ee",
+            "aliases": ["ExpressionEngine", "ee"],
+            "extensions": [".html"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ee",
+            "scopeName": "text.html.ee",
+            "path": "./syntaxes/ee.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "ee",
+                "path": "./snippets/global-variables.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/tag-pair.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/channel-entries.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/keywords.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/categories.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/conditionals.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/layout.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/pagination.json"
+            },
+            {
+                "language": "ee",
+                "path": "./snippets/segments.json"
+            }
+        ]
+    }
+}

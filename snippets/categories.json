@@ -1,0 +1,52 @@
+{
+  "{categories}": {
+    "scope": "html.ee",
+    "prefix": "categories-pair",
+    "body": "{categories}$1{/categories}"
+  },
+  "category_count": {
+    "scope": "html.ee",
+    "prefix": "category_count",
+    "body": "category_count"
+  },
+  "category_description": {
+    "scope": "html.ee",
+    "prefix": "category_description",
+    "body": "category_description"
+  },
+  "category_group": {
+    "scope": "html.ee",
+    "prefix": "category_group",
+    "body": "category_group"
+  },
+  "category_id": {
+    "scope": "html.ee",
+    "prefix": "category_id",
+    "body": "category_id"
+  },
+  "category_image": {
+    "scope": "html.ee",
+    "prefix": "category_image",
+    "body": "category_image"
+  },
+  "category_name": {
+    "scope": "html.ee",
+    "prefix": "category_name",
+    "body": "category_name"
+  },
+  "category_reverse_count": {
+    "scope": "html.ee",
+    "prefix": "category_reverse_count",
+    "body": "category_reverse_count"
+  },
+  "category_total_results": {
+    "scope": "html.ee",
+    "prefix": "category_total_results",
+    "body": "category_total_results"
+  },
+  "category_url_title": {
+    "scope": "html.ee",
+    "prefix": "category_url_title",
+    "body": "category_url_title"
+  }
+}

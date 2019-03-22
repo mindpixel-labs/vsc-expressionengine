@@ -1,0 +1,233 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ExpressionEngine",
+	"scopeName": "text.html.ee",
+	"patterns": [
+		{
+			"include": "text.html.basic"
+		},
+		{
+			"include": "#components"
+		}
+	],
+	"repository": {
+		"components": {
+			"patterns": [
+				{
+					"include": "#comment"
+				},
+				{
+					"include": "#conditionals-tags-elseif"
+				},
+				{
+					"include": "#conditionals-tags-else"
+				},
+				{
+					"include": "#conditionals-tags-opening-closing"
+				},
+				{
+					"include": "#layout-set-tag"
+				},
+				{
+					"include": "#module-tags"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"begin": "\\{!--",
+					"end": "--\\}",
+					"name": "comment.block.ee"
+				}
+			]
+		},
+		"conditionals-tags-opening-closing": {
+			"patterns": [{
+				"begin": "{(/?if)",
+				"end": "}",
+				"captures": {
+					"1": {
+						"name": "keyword.control.if.php.ee"
+					}
+				},
+				"patterns": [{
+						"include": "#boolean-comparisons"
+					},
+					{
+						"include": "#logical-operators"
+					},
+					{
+						"include": "#comparison-and-or"
+					},
+					{
+						"include": "#double-quotes"
+					},
+					{
+						"include": "#single-quotes"
+					}
+				]
+			}]
+		},
+		"conditionals-tags-elseif": {
+			"patterns": [{
+      "begin": "{(/?if:elseif)",
+      "end": "}",
+      "captures": {
+      	"1": {
+      		"name": "keyword.control.if.php.ee"
+      	}
+      },
+      "patterns": [
+						{
+							"include": "#boolean-comparisons"
+						},
+						{
+							"include": "#logical-operators"
+						},
+						{
+							"include": "#comparison-and-or"
+						},
+						{
+							"include": "#double-quotes"
+						},
+						{
+							"include": "#single-quotes"
+						}
+      		]
+				}
+			]
+		},
+		"conditionals-tags-else": {
+			"patterns": [{
+				"begin": "{(/?if:else)",
+				"end": "}",
+				"captures": {
+					"1": {
+						"name": "keyword.control.if.php.ee"
+					}
+				}
+			}]
+		},
+		"layout-set-tag": {
+			"patterns": [{
+      "begin": "{(/?layout)(:)(set)",
+      "end": "}",
+      "captures": {
+      	"1": {
+      		"name": "support.function.construct.begin.ee"
+      	},
+      	"2": {
+      		"name": "text.html.ee"
+      	},
+      	"3": {
+      		"name": "support.function.construct.begin.ee"
+      	}
+      },
+      "patterns": [
+					{
+						"include": "#double-quotes"
+					},
+					{
+						"include": "#single-quotes"
+					},
+					{
+						"include": "#tag-parameter"
+					}
+      	]
+			}]
+		},
+		"module-tags": {
+			"patterns": [{
+				"begin": "({/?)",
+				"end": "(})",
+				"name": "text.html.ee",
+				"patterns": [
+					{
+						"include": "#module-tags"
+					},
+					{
+						"include": "#module-tag-open-close-ee"
+					},
+					{
+						"include": "#double-quotes"
+					},
+					{
+						"include": "#single-quotes"
+					},
+					{
+						"include": "#tag-parameter"
+					}
+				]
+			}]
+		},
+		"module-tag-open-close-ee": {
+			"patterns": [{
+				"match": "\\/?(exp):(\\w*):?(\\w*)?",
+				"captures": {
+					"1": {
+						"name": "text.html.ee"
+					},
+					"2": {
+						"name": "text.html.ee"
+					},
+					"3": {
+						"name": "text.html.ee"
+					}
+				}
+			}]
+		},
+		"double-quotes": {
+			"patterns": [{
+				"begin": "\"",
+				"end": "\"",
+				"name": "string.quoted.double.php.ee"
+			}]
+		},
+		"single-quotes": {
+			"patterns": [{
+				"begin": "'",
+				"end": "'",
+				"name": "string.quoted.single.php.ee"
+			}]
+		},
+		"comparison-and-or": {
+			"patterns": [{
+				"match": "\\s?(AND|OR|&&|\\|\\|)\\s?",
+				"name": "keyword.operator.other.ee"
+			}]
+		},
+		"logical-operators": {
+			"patterns": [{
+				"match": "(\\(|\\)|<=|>=|<>|<|>|=|!=|==|===|!==|~|\\^=|\\*=|\\$=|\\^|\\*\\*|\\/|\\%|\\+|-|\\.)",
+				"name": "keyword.operator.other.ee"
+			}]
+		},
+		"tag-parameter": {
+			"patterns": [{
+				"match": "(\\w+:)?(\\w+)=|\\s(\\w+)\\s",
+				"captures": {
+					"1": {
+						"name": "support.function.construct.begin.ee"
+					},
+					"2": {
+						"name": "support.function.construct.begin.ee"
+					},
+					"3": {
+						"name": "support.function.construct.begin.ee"
+					}
+				}
+			}]
+		},
+		"boolean-comparisons": {
+			"patterns": [{
+				"match": "(?<!\\w)(TRUE|FALSE|1|0|-1|\"1\"|\"0\"|\"-1\")",
+				"captures": {
+					"1": {
+						"name": "constant.other.php.ee"
+					}
+				}
+			}]
+		}
+	}
+}
