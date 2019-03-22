@@ -9,6 +9,15 @@ This is a port of our atom-expressionengine package for Atom Editor. New feature
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax.png)
 
+## Getting Started
+Make sure to update your user **settings.json** to include the extensions language indentifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
+
+```javascript
+    "emmet.includeLanguages": {
+        "ee": "html"
+    }
+```
+
 ## Documentation
 View the full [wiki](https://github.com/mindpixel-labs/vsc-expressionengine/wiki) to learn about all the available options.
 

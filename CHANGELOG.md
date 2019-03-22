@@ -5,6 +5,10 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 0.0.5 - 2019-3-22
+### Update the README.md
+- Added documentation to allow for Emmet to function properly for autocompletion
+
 ## 0.0.4 - 2019-3-22
 ### Update .vscodeignore
 - Removed glob that caused the icon to not be found
