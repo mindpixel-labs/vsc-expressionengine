@@ -3,3 +3,9 @@
 .gitignore
 vsc-extension-quickstart.md
 docs/images/vsc-ee-syntax.png
+out/test/**
+src/**
+**/tsconfig.json
+**/tslint.json
+**/*.map
+**/*.ts
