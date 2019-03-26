@@ -5,6 +5,10 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 0.0.7 - 2019-3-25
+### Update layout.json
+- Added fix for the layout tag pair where closing tag was missing a forward slash
+
 ## 0.0.6 - 2019-3-22
 ### Update the VSCODE Marketplace icon
 - Added a new icon for the Visual Studio Code Marketplace
