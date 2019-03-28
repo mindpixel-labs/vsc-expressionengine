@@ -1,52 +1,52 @@
 {
   "{categories}": {
     "scope": "html.ee",
-    "prefix": "categories-pair",
+    "prefix": ["categories-pair", "cp"],
     "body": "{categories}$1{/categories}"
   },
   "category_count": {
     "scope": "html.ee",
-    "prefix": "category_count",
+    "prefix": ["category_count", "cc"],
     "body": "category_count"
   },
   "category_description": {
     "scope": "html.ee",
-    "prefix": "category_description",
+    "prefix": ["category_description", "cd"],
     "body": "category_description"
   },
   "category_group": {
     "scope": "html.ee",
-    "prefix": "category_group",
+    "prefix": ["category_group", "cg"],
     "body": "category_group"
   },
   "category_id": {
     "scope": "html.ee",
-    "prefix": "category_id",
+    "prefix": ["category_id", "cid"],
     "body": "category_id"
   },
   "category_image": {
     "scope": "html.ee",
-    "prefix": "category_image",
+    "prefix": ["category_image", "ci"],
     "body": "category_image"
   },
   "category_name": {
     "scope": "html.ee",
-    "prefix": "category_name",
+    "prefix": ["category_name", "cn"],
     "body": "category_name"
   },
   "category_reverse_count": {
     "scope": "html.ee",
-    "prefix": "category_reverse_count",
+    "prefix": ["category_reverse_count", "crc"],
     "body": "category_reverse_count"
   },
   "category_total_results": {
     "scope": "html.ee",
-    "prefix": "category_total_results",
+    "prefix": ["category_total_results", "ctr"],
     "body": "category_total_results"
   },
   "category_url_title": {
     "scope": "html.ee",
-    "prefix": "category_url_title",
+    "prefix": ["category_url_title", "cut"],
     "body": "category_url_title"
   }
 }

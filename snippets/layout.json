@@ -1,27 +1,27 @@
 {
   "{layout='...'}": {
     "scope": "html.ee",
-    "prefix": "layout",
+    "prefix": ["layout", "l"],
     "body": "{layout='$1'}"
   },
   "{layout:set name='...' value='...'}": {
     "scope": "html.ee",
-    "prefix": "layout-set",
+    "prefix": ["layout-set", "ls"],
     "body": "{layout:set name='$1' value='$2'}$0"
   },
   "{layout:set name='...'}...{/layout:set}": {
     "scope": "html.ee",
-    "prefix": "layout-set-pair",
+    "prefix": ["layout-set-pair", "lsp"],
     "body": "{layout:set name='$1'}$2{/layout:set}$0"
   },
   "{layout:(...)}": {
     "scope": "html.ee",
-    "prefix": "layout-var",
+    "prefix": ["layout-var", "lv"],
     "body": "{layout:$1}"
   },
   "{layout:(...)}...{/layout:(...)}": {
     "scope": "html.ee",
-    "prefix": "layout-pair",
+    "prefix": ["layout-pair", "lp"],
     "body": [
       "{layout:$1}",
       "\t$2",
@@ -30,7 +30,7 @@
   },
   "{layout:set:append name='...'}...{/layout:set:append}": {
     "scope": "html.ee",
-    "prefix": "layout-append",
+    "prefix": ["layout-append", "la"],
     "body": "{layout:set:append name='$1'}$2{/layout:set:append}"
   }
 }

@@ -13,25 +13,91 @@
         "Programming Languages",
         "Snippets"
     ],
-	"repository": {
-	    "type": "git",
-	    "url": "https://github.com/mindpixel-labs/vsc-expressionengine.git"
+    "activationEvents": [
+        "onCommand:extension.ee.createTemplate",
+        "onCommand:extension.ee.createTemplatePartial",
+        "onCommand:extension.ee.createTemplateVariable",
+        "onCommand:extension.ee.createAddon"
+    ],
+    "main": "./out/extension.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mindpixel-labs/vsc-expressionengine.git"
     },
-	"bugs": {
-	    "url": "https://github.com/mindpixel-labs/vsc-expressionengine/issues"
-	},
+    "bugs": {
+        "url": "https://github.com/mindpixel-labs/vsc-expressionengine/issues"
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "yarn run compile && node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "validatorjs": "^3.15.1"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^10.12.21",
+        "@types/validatorjs": "^3.15.0",
+        "tslint": "^5.12.1",
+        "typescript": "^3.3.1",
+        "vscode": "^1.1.28"
+    },
     "contributes": {
-        "languages": [{
-            "id": "ee",
-            "aliases": ["ExpressionEngine", "ee"],
-            "extensions": [".html"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ee",
-            "scopeName": "text.html.ee",
-            "path": "./syntaxes/ee.tmLanguage.json"
-        }],
+        "configuration": {
+            "title": "ExpressionEngine",
+            "properties": {
+                "ee.templatePath": {
+                    "type": "string",
+                    "default": "${workspaceFolder}/system/user/templates/default_site",
+                    "description": "The path to your projects template directory"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "extension.ee.createTemplate",
+                "title": "Create Template",
+                "category": "ExpressionEngine"
+            },
+            {
+                "command": "extension.ee.createTemplatePartial",
+                "title": "Create Template Partial",
+                "category": "ExpressionEngine"
+            },
+            {
+                "command": "extension.ee.createTemplateVariable",
+                "title": "Create Template Variable",
+                "category": "ExpressionEngine"
+            },
+            {
+                "command": "extension.ee.createAddon",
+                "title": "Create Add-on Boilerplate",
+                "category": "ExpressionEngine"
+            }
+        ],
+        "languages": [
+            {
+                "id": "ee",
+                "aliases": [
+                    "ExpressionEngine",
+                    "ee"
+                ],
+                "extensions": [
+                    ".html"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ee",
+                "scopeName": "text.html.ee",
+                "path": "./syntaxes/ee.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "ee",

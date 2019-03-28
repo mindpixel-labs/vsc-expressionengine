@@ -1,5 +1,6 @@
 # vsc-expressionengine
 ![](https://img.shields.io/badge/Status-Maintained-brightgreen.svg)
+![](https://img.shields.io/visual-studio-marketplace/v/mindpixel-labs.vsc-expressionengine.svg?color=brightgreen&label=Visual%20Studio%20Marketplace&logo=Visual%20Studio%20Code)
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
@@ -17,6 +18,22 @@ Make sure to update your user **settings.json** to include the extensions langua
         "ee": "html"
     }
 ```
+
+## Customizing Colors
+You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
+
+```javascript
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [{
+            "scope": "entity.name.tag.ee",
+            "settings": {
+                "foreground": "#B67FFF"
+            }
+        }]
+    }
+```
+
+View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
 
 ## Documentation
 View the full [wiki](https://github.com/mindpixel-labs/vsc-expressionengine/wiki) to learn about all the available options.

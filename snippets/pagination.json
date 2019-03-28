@@ -1,7 +1,7 @@
 {
   "{paginate}{pagination_links}{/paginate}": {
     "scope": "html.ee",
-    "prefix": "pagination-links",
+    "prefix": ["pagination-links", "pl"],
     "body": [
       "{paginate}",
       "\t{pagination_links}",
@@ -10,7 +10,7 @@
   },
   "Pagination Boilerplate": {
     "scope": "html.ee",
-    "prefix": "paginate-pair",
+    "prefix": ["paginate-pair", "pp"],
     "body": [
       "{paginate}",
       "\t{pagination_links}",

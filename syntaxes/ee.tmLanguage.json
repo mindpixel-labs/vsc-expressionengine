@@ -7,6 +7,14 @@
 			"include": "text.html.basic"
 		},
 		{
+			"begin": "(<\\?(php|=)?)",
+			"end": "(\\?>)",
+			"name": "punctuation.section.embedded.begin.php",
+			"patterns": [{
+				"include": "source.php"
+			}]
+		},
+		{
 			"include": "#components"
 		}
 	],
@@ -166,13 +174,13 @@
 				"match": "\\/?(exp):(\\w*):?(\\w*)?",
 				"captures": {
 					"1": {
-						"name": "text.html.ee"
+						"name": "entity.name.tag.ee"
 					},
 					"2": {
-						"name": "text.html.ee"
+						"name": "entity.name.tag.ee"
 					},
 					"3": {
-						"name": "text.html.ee"
+						"name": "entity.name.tag.ee"
 					}
 				}
 			}]
