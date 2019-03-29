@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { AddonModel } from '../../models/addon';
+import WorkspaceService from '../../services/WorkspaceService';
 
 export default class CreateTemplatePartial {
 
@@ -7,6 +8,11 @@ export default class CreateTemplatePartial {
    * Run the command logic
    */
   public static async run() {
+    // Ensure the user has a workspace open before attempting to create anything
+    if (!WorkspaceService.hasWorkspace()) {
+      return;
+    }
+
     let selection = await vscode.window.showQuickPick(AddonModel, { canPickMany: false }),
       templateType: string;
 
@@ -19,8 +25,8 @@ export default class CreateTemplatePartial {
     vscode.window.showInputBox({
       prompt: "Enter the Namespace for the Add-on.",
       placeHolder: "Vendor\\Module",
-    }).then((info) => {
-      console.log((`Template ${info}${templateType} was created!`));
+    }).then((input) => {
+      console.log((`Template ${input} was created!`));
     });
   }
 }
