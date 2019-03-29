@@ -56,14 +56,14 @@ export default class ValidationService {
    * 
    * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
    */
-  public validateTemplateGroup(template: string) {
+  public validateTemplateGroup(value: string) {
 
-    if (!template || template.trim().length === 0) {
+    if (!value || value.trim().length === 0) {
       return 'Please provide a name';
     }
 
     let data = {
-      name: template
+      name: value
     }
 
     let rules: Validator.Rules = {
@@ -86,14 +86,14 @@ export default class ValidationService {
     }
   }
 
-  public validateTemplatePartial(partial: string) {
+  public validateTemplatePartial(value: string) {
 
-    if (!partial || partial.trim().length === 0) {
+    if (!value || value.trim().length === 0) {
       return 'Please provide a name';
     }
 
     let data = {
-      name: partial
+      name: value
     };
 
     let rules: Validator.Rules = {
@@ -117,14 +117,14 @@ export default class ValidationService {
     }
   }
 
-  public validateTemplateVariable(partial: string) {
+  public validateTemplateVariable(value: string) {
 
-    if (!partial || partial.trim().length === 0) {
+    if (!value || value.trim().length === 0) {
       return 'Please provide a name';
     }
 
     let data = {
-      name: partial
+      name: value
     };
 
     let rules: Validator.Rules = {
@@ -153,14 +153,14 @@ export default class ValidationService {
    * 
    * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
    */
-  public validateTemplateFile(template: string) {
+  public validateTemplateFile(value: string) {
 
-    if (!template || template.trim().length === 0) {
+    if (!value || value.trim().length === 0) {
       return 'Please provide a name';
     }
 
     let data = {
-      name: template
+      name: value
     }
 
     let rules: Validator.Rules = {
