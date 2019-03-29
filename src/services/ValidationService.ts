@@ -86,6 +86,11 @@ export default class ValidationService {
     }
   }
 
+  /**
+   * validateTemplatePartial
+   * 
+   * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   */
   public validateTemplatePartial(value: string) {
 
     if (!value || value.trim().length === 0) {
@@ -117,6 +122,11 @@ export default class ValidationService {
     }
   }
 
+  /**
+   * validateTemplateVariable
+   * 
+   * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   */
   public validateTemplateVariable(value: string) {
 
     if (!value || value.trim().length === 0) {
