@@ -60,22 +60,22 @@
             {
                 "command": "extension.ee.createTemplate",
                 "title": "Create Template",
-                "category": "ExpressionEngine"
+                "category": "EE"
             },
             {
                 "command": "extension.ee.createTemplatePartial",
                 "title": "Create Template Partial",
-                "category": "ExpressionEngine"
+                "category": "EE"
             },
             {
                 "command": "extension.ee.createTemplateVariable",
                 "title": "Create Template Variable",
-                "category": "ExpressionEngine"
+                "category": "EE"
             },
             {
                 "command": "extension.ee.createAddon",
                 "title": "Create Add-on Boilerplate",
-                "category": "ExpressionEngine"
+                "category": "EE"
             }
         ],
         "languages": [

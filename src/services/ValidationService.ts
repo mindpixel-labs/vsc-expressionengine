@@ -115,7 +115,37 @@ export default class ValidationService {
     } else {
       return '';
     }
+  }
 
+  public validateTemplateVariable(partial: string) {
+
+    if (!partial || partial.trim().length === 0) {
+      return 'Please provide a name';
+    }
+
+    let data = {
+      name: partial
+    };
+
+    let rules: Validator.Rules = {
+      name: 'required|max:50|valid_group_chars|unique_variable',
+    }
+
+    let messages = {
+      'required.name': 'You must supply a name.',
+      'valid_group_chars.name': 'The name submitted may only contain alpha-numeric characters, underscores, and dashes',
+      'max': 'Template Variables are limited to 50 characters.',
+      'unique_variable.name': 'The template partial provided already exists.'
+    };
+
+    let validation = new Validator(data, rules, messages);
+
+    if (validation.fails()) {
+      let validationResult = validation.errors.first('name');
+      return validationResult as string;
+    } else {
+      return '';
+    }
   }
 
   /**
@@ -180,6 +210,15 @@ export default class ValidationService {
       let extension = this.fileType;
       let group = `${this.templateGroup}.group`;
       let fileToCreate = `${directory}/_partials/${file}.html`;
+
+      return !fs.existsSync(fileToCreate);
+    }, '');
+
+    Validator.register('unique_variable', (file, requirement, attribute) => {
+      let directory = WorkspaceService.getUserTemplatesDirectory();
+      let extension = this.fileType;
+      let group = `${this.templateGroup}.group`;
+      let fileToCreate = `${directory}/_variables/${file}.html`;
 
       return !fs.existsSync(fileToCreate);
     }, '');
