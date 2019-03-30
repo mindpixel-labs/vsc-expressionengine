@@ -11,6 +11,11 @@ export default class CreateTemplatePartial {
    */
   public static async run() {
 
+    // Ensure the user has a workspace open before attempting to create anything
+    if (!WorkspaceService.hasWorkspace()) {
+      return;
+    }
+
     let copy                  = require('copy-template-dir'),
         extensionDir          : string = '',
         extensionTemplateDir  : string = '';
@@ -24,11 +29,6 @@ export default class CreateTemplatePartial {
     // copy(inDir, outDir, vars, (err:any, createdFiles:Array<any>) => {
     //   console.log(err);
     // })
-
-    // Ensure the user has a workspace open before attempting to create anything
-    if (!WorkspaceService.hasWorkspace()) {
-      return;
-    }
 
     // Show selection list for user to choose their add-on type
     let selection = await vscode.window.showQuickPick(AddonModel, { canPickMany: false }),
