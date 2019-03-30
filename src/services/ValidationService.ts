@@ -190,10 +190,10 @@ export default class ValidationService {
     }
 
     let messages = {
-      'required.name': 'You must supply a name.',
-      'valid_group_chars.name': 'The name submitted may only contain alpha-numeric characters, underscores, and dashes',
-      'max': 'Template Variables are limited to 50 characters.',
-      'unique_variable.name': 'The template partial provided already exists.'
+      'required.name'             : 'You must supply a name.',
+      'valid_group_chars.name'    : 'The name submitted may only contain alpha-numeric characters, underscores, and dashes',
+      'max'                       : 'Template Variables are limited to 50 characters.',
+      'unique_variable.name'      : 'The template partial provided already exists.'
     };
 
     let validation = new Validator(data, rules, messages);
