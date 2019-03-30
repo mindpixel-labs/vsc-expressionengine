@@ -31,7 +31,7 @@ export default class CreateTemplate {
     // Ensure the user input is not empty
     if (templateTypeSelection !== undefined) {
       templateType = templateTypeSelection.label;
-      validator.fileType = templateType;
+      validator.fileExtension = templateType;
     } else {
       return;
     }

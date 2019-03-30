@@ -3,46 +3,55 @@ import * as fs from 'fs';
 import WorkspaceService from './WorkspaceService';
 
 export default class ValidationService {
+
   /**
-   * fileType
-   * The file type as selected by the user
+   * fileExtension
+   * @type {string} The file type selected by the user
   */
-  private _fileType: string = '';
+  private _fileExtension: string = '';
 
   /**
    * templateGroup
-   * The template group name as provided by the user
+   * 
+   * @type {string} The template group name provided by the user
   */
   private _templateGroup: string = '';
 
-  public workspaceDirectory: string = '';
+  /**
+   * userTemplatesDirectory
+   * @type {string} The users ExpressionEngine Template Directory
+  */
+  public userTemplatesDirectory: string = '';
 
   /**
-   * Initialize custom validation rules
+   * Initialize the validation service
    */
   constructor(){
     // Register the current workspace
-    this.workspaceDirectory = WorkspaceService.getUserTemplatesDirectory();
+    this.userTemplatesDirectory = WorkspaceService.getUserTemplatesDirectory();
     // Register custom validator rules
-    this.setRules();
+    this.registerValidationRules();
   }
 
   /**
-   * Get fileType
+   * Get fileExtension
+   * @return {string} The file extension type for a template {.html, .css, .xml, .feed, .js}
   */
-  get fileType() {
-    return this._fileType;
+  get fileExtension() {
+    return this._fileExtension;
   }
 
   /**
-   * Set fileType
+   * Set fileExtension
+   * @param {string} value The file extension type for a template {.html, .css, .xml, .feed, .js}
   */
-  set fileType(file:string) {
-    this._fileType = file;
+  set fileExtension(value:string) {
+    this._fileExtension = value;
   }
 
   /**
    * Get templateGroup
+   * @return {string} A template group name provided by the user
   */
   get templateGroup() {
     return this._templateGroup;
@@ -51,14 +60,15 @@ export default class ValidationService {
   /**
    * Set templateGroup
   */
-  set templateGroup(group: string) {
-    this._templateGroup = group;
+  set templateGroup(value: string) {
+    this._templateGroup = value;
   }
 
   /**
-   * Set Custom Validation Rules
+   * Registers Custom Validation Rules
+   * @constructor
    */
-  private setRules() {
+  private registerValidationRules() {
     Validator.register('valid_file_chars', (value, requirement, attribute) => {
       return /^[a-zA-Z0-9._-]*$/.test(value as string);
     }, '');
@@ -68,17 +78,17 @@ export default class ValidationService {
     }, '');
 
     Validator.register('unique_template', (file, requirement, attribute) => {
-      let fileToCreate = `${this.workspaceDirectory}/${this.templateGroup}.group/${file}${this.fileType}`;
+      let fileToCreate = `${this.userTemplatesDirectory}/${this.templateGroup}.group/${file}${this.fileExtension}`;
       return !fs.existsSync(fileToCreate);
     }, '');
 
     Validator.register('unique_partial', (file, requirement, attribute) => {
-      let fileToCreate = `${this.workspaceDirectory}/_partials/${file}.html`;
+      let fileToCreate = `${this.userTemplatesDirectory}/_partials/${file}.html`;
       return !fs.existsSync(fileToCreate);
     }, '');
 
     Validator.register('unique_variable', (file, requirement, attribute) => {
-      let fileToCreate = `${this.workspaceDirectory}/_variables/${file}.html`;
+      let fileToCreate = `${this.userTemplatesDirectory}/_variables/${file}.html`;
       return !fs.existsSync(fileToCreate);
     }, '');
   }
@@ -86,7 +96,9 @@ export default class ValidationService {
   /**
    * validateTemplateGroup
    * 
-   * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @param {string} value The value sent in from vscode.InputBoxOptions
+   * @link https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @return {string} Return undefined, null, or the empty string when 'value' is valid.
    */
   public validateTemplateGroup(value: string) {
 
@@ -121,7 +133,9 @@ export default class ValidationService {
   /**
    * validateTemplatePartial
    * 
-   * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @param {string} value The value sent in from vscode.InputBoxOptions
+   * @link https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @return {string} Return undefined, null, or the empty string when 'value' is valid.
    */
   public validateTemplatePartial(value: string) {
 
@@ -157,7 +171,9 @@ export default class ValidationService {
   /**
    * validateTemplateVariable
    * 
-   * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @param {string} value The value sent in from vscode.InputBoxOptions
+   * @link https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @return {string} Return undefined, null, or the empty string when 'value' is valid.
    */
   public validateTemplateVariable(value: string) {
 
@@ -193,7 +209,9 @@ export default class ValidationService {
   /**
    * validateTemplateFile
    * 
-   * https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @param {string} value The value sent in from vscode.InputBoxOptions
+   * @link https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @return {string} Return undefined, null, or the empty string when 'value' is valid.
    */
   public validateTemplateFile(value: string) {
 
