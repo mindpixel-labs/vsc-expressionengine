@@ -123,8 +123,7 @@ export default class ValidationService {
     let validation = new Validator(data, rules, messages);
 
     if ( validation.fails() ) {
-      let validationResult = validation.errors.first('name');
-      return validationResult as string;
+      return validation.errors.first('name') as string;
     } else {
       return '';
     }
@@ -161,8 +160,7 @@ export default class ValidationService {
     let validation = new Validator(data, rules, messages);
 
     if (validation.fails()) {
-      let validationResult = validation.errors.first('name');
-      return validationResult as string;
+      return validation.errors.first('name') as string;
     } else {
       return '';
     }
@@ -199,8 +197,7 @@ export default class ValidationService {
     let validation = new Validator(data, rules, messages);
 
     if (validation.fails()) {
-      let validationResult = validation.errors.first('name');
-      return validationResult as string;
+      return validation.errors.first('name') as string;
     } else {
       return '';
     }
@@ -237,8 +234,7 @@ export default class ValidationService {
     let validation = new Validator(data, rules, messages);
 
     if (validation.fails()) {
-      let validationResult = validation.errors.first('name');
-      return validationResult as string;
+      return validation.errors.first('name') as string;
     } else {
       return '';
     }
