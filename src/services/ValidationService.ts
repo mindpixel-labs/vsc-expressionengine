@@ -106,7 +106,6 @@ export default class ValidationService {
 
     Validator.register('unique_addon', (name, requirement, attribute) => {
       let fileToCreate = `${this.userAddonsDirectory}/${name}`;
-      console.log(fileToCreate);
       return !fs.existsSync(fileToCreate);
     });
 
