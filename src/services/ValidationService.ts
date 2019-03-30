@@ -15,10 +15,14 @@ export default class ValidationService {
   */
   private _templateGroup: string = '';
 
+  public workspaceDirectory: string = '';
+
   /**
    * Initialize custom validation rules
    */
   constructor(){
+    // Register the current workspace
+    this.workspaceDirectory = WorkspaceService.getUserTemplatesDirectory();
     // Register custom validator rules
     this.setRules();
   }
@@ -49,6 +53,34 @@ export default class ValidationService {
   */
   set templateGroup(group: string) {
     this._templateGroup = group;
+  }
+
+  /**
+   * Set Custom Validation Rules
+   */
+  private setRules() {
+    Validator.register('valid_file_chars', (value, requirement, attribute) => {
+      return /^[a-zA-Z0-9._-]*$/.test(value as string);
+    }, '');
+
+    Validator.register('valid_group_chars', (value, requirement, attribute) => {
+      return /^[a-zA-Z0-9_-]*$/.test(value as string);
+    }, '');
+
+    Validator.register('unique_template', (file, requirement, attribute) => {
+      let fileToCreate = `${this.workspaceDirectory}/${this.templateGroup}.group/${file}${this.fileType}`;
+      return !fs.existsSync(fileToCreate);
+    }, '');
+
+    Validator.register('unique_partial', (file, requirement, attribute) => {
+      let fileToCreate = `${this.workspaceDirectory}/_partials/${file}.html`;
+      return !fs.existsSync(fileToCreate);
+    }, '');
+
+    Validator.register('unique_variable', (file, requirement, attribute) => {
+      let fileToCreate = `${this.workspaceDirectory}/_variables/${file}.html`;
+      return !fs.existsSync(fileToCreate);
+    }, '');
   }
 
   /**
@@ -192,45 +224,5 @@ export default class ValidationService {
     } else {
       return '';
     }
-  }
-
-  /**
-   * Set Custom Validation Rules
-   */
-  private setRules() {
-    Validator.register('valid_file_chars', (value, requirement, attribute) => {
-      return /^[a-zA-Z0-9._-]*$/.test(value as string);
-    }, '');
-
-    Validator.register('valid_group_chars', (value, requirement, attribute) => {
-      return /^[a-zA-Z0-9_-]*$/.test(value as string);
-    }, '');
-
-    Validator.register('unique_template', (file, requirement, attribute) => {
-      let directory       = WorkspaceService.getUserTemplatesDirectory();
-      let extension       = this.fileType;
-      let group           = `${this.templateGroup}.group`;
-      let fileToCreate    = `${directory}/${group}/${file}${extension}`;
-
-      return !fs.existsSync(fileToCreate);
-    }, '');
-
-    Validator.register('unique_partial', (file, requirement, attribute) => {
-      let directory = WorkspaceService.getUserTemplatesDirectory();
-      let extension = this.fileType;
-      let group = `${this.templateGroup}.group`;
-      let fileToCreate = `${directory}/_partials/${file}.html`;
-
-      return !fs.existsSync(fileToCreate);
-    }, '');
-
-    Validator.register('unique_variable', (file, requirement, attribute) => {
-      let directory = WorkspaceService.getUserTemplatesDirectory();
-      let extension = this.fileType;
-      let group = `${this.templateGroup}.group`;
-      let fileToCreate = `${directory}/_variables/${file}.html`;
-
-      return !fs.existsSync(fileToCreate);
-    }, '');
   }
 }
