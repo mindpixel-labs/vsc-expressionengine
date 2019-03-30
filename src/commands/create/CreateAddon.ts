@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { AddonModel } from '../../models/addon';
 import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
+import * as path from 'path';
 
 export default class CreateTemplatePartial {
 
@@ -9,6 +10,21 @@ export default class CreateTemplatePartial {
    * Run the command logic
    */
   public static async run() {
+
+    let copy                  = require('copy-template-dir'),
+        extensionDir          : string = '',
+        extensionTemplateDir  : string = '';
+
+    const Extension = vscode.extensions.getExtension('mindpixel-labs.vsc-expressionengine');
+
+    if(Extension !== undefined) {
+      extensionTemplateDir = path.join(Extension.extensionPath, 'templates');
+    }
+ 
+    // copy(inDir, outDir, vars, (err:any, createdFiles:Array<any>) => {
+    //   console.log(err);
+    // })
+
     // Ensure the user has a workspace open before attempting to create anything
     if (!WorkspaceService.hasWorkspace()) {
       return;
