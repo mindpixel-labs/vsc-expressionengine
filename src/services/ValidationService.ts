@@ -5,6 +5,11 @@ import WorkspaceService from './WorkspaceService';
 export default class ValidationService {
 
   /**
+   * Set class index signature
+  */
+  [key: string]: any
+
+  /**
    * fileExtension
    * @type {string} The file type selected by the user
   */
@@ -19,16 +24,23 @@ export default class ValidationService {
 
   /**
    * userTemplatesDirectory
-   * @type {string} The users ExpressionEngine Template Directory
+   * @type {string} The users ExpressionEngine template directory
   */
   public userTemplatesDirectory: string = '';
+
+  /**
+   * userAddonsDirectory
+   * @type {string} The users ExpressionEngine add-on directory
+  */
+ public userAddonsDirectory: string = '';
 
   /**
    * Initialize the validation service
    */
   constructor(){
-    // Register the current workspace
+    // Register the current workspace directories
     this.userTemplatesDirectory = WorkspaceService.getUserTemplatesDirectory();
+    this.userAddonsDirectory    = WorkspaceService.getUserDirectory('addons');
     // Register custom validator rules
     this.registerValidationRules();
   }
@@ -71,27 +83,79 @@ export default class ValidationService {
   private registerValidationRules() {
     Validator.register('valid_file_chars', (value, requirement, attribute) => {
       return /^[a-zA-Z0-9._-]*$/.test(value as string);
-    }, '');
+    });
 
     Validator.register('valid_group_chars', (value, requirement, attribute) => {
       return /^[a-zA-Z0-9_-]*$/.test(value as string);
-    }, '');
+    });
 
     Validator.register('unique_template', (file, requirement, attribute) => {
       let fileToCreate = `${this.userTemplatesDirectory}/${this.templateGroup}.group/${file}${this.fileExtension}`;
       return !fs.existsSync(fileToCreate);
-    }, '');
+    });
 
     Validator.register('unique_partial', (file, requirement, attribute) => {
       let fileToCreate = `${this.userTemplatesDirectory}/_partials/${file}.html`;
       return !fs.existsSync(fileToCreate);
-    }, '');
+    });
 
     Validator.register('unique_variable', (file, requirement, attribute) => {
       let fileToCreate = `${this.userTemplatesDirectory}/_variables/${file}.html`;
       return !fs.existsSync(fileToCreate);
-    }, '');
+    });
+
+    Validator.register('unique_addon', (name, requirement, attribute) => {
+      let fileToCreate = `${this.userAddonsDirectory}/${name}`;
+      console.log(fileToCreate);
+      return !fs.existsSync(fileToCreate);
+    });
+
+    Validator.register('valid_addon_name', (value, requirement, attribute) => {
+      return /^\b[^_][a-z_]*\b$/.test(value as string);
+    });
+
+    Validator.register('valid_vendor_name', (value, requirement, attribute) => {
+      return /^\b[A-Z][a-z][^_]\w+\b$/.test(value as string);
+    });
   }
+
+  /**
+   * validateAddonName
+   * 
+   * @param {string} value The value sent in from vscode.InputBoxOptions
+   * @link https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @return {string} Return undefined, null, or the empty string when 'value' is valid.
+   */
+  public validateAddonName(value: string) {
+
+    if (!value || value.trim().length === 0) {
+      return 'Please provide a name';
+    }
+
+    let data = {
+      name: value
+    }
+
+    let rules: Validator.Rules = {
+      name: 'required|max:50|valid_addon_name|unique_addon',
+    }
+
+    let messages = {
+      'required'        : 'You must supply a name.',
+      'valid_addon_name': 'Format must be my_addon_name or myaddon and cannot include special characters.',
+      'unique_addon'    : 'An add-on with that name is already present in your site.',
+      'max'             : 'Template Group and Template Files are limited to 50 characters.'
+    };
+
+    let validation = new Validator(data, rules, messages);
+
+    if ( validation.fails() ) {
+      return validation.errors.first('name') as string;
+    } else {
+      return '';
+    }
+  }
+  
 
   /**
    * validateTemplateGroup
@@ -228,6 +292,41 @@ export default class ValidationService {
       'required.name'           : 'You must supply a name.',
       'valid_file_chars.name'   : 'The name must contain only letters, numbers, dashes, underscores and dots.',
       'unique_template.name'    : 'The template name provided already exists.',
+      'max'                     : 'Template Group and Template Files are limited to 50 characters.'
+    };
+
+    let validation = new Validator(data, rules, messages);
+
+    if (validation.fails()) {
+      return validation.errors.first('name') as string;
+    } else {
+      return '';
+    }
+  }
+
+  /**
+   * validateVendorName
+   * 
+   * @param {string} value The value sent in from vscode.InputBoxOptions
+   * @link https://docs.expressionengine.com/latest/templates/overview.html#templates-are-saved-as-text-files
+   * @return {string} Return undefined, null, or the empty string when 'value' is valid.
+   */
+  public validateVendorName(value:string) {
+    if (!value || value.trim().length === 0) {
+      return 'Please provide a name';
+    }
+
+    let data = {
+      name: value
+    }
+
+    let rules: Validator.Rules = {
+      name: 'required|max:50|valid_vendor_name',
+    }
+
+    let messages = {
+      'required.name'           : 'You must supply a name.',
+      'valid_vendor_name'       : 'A valid vendor name may only contain a single word that starts with an uppercase letter.',
       'max'                     : 'Template Group and Template Files are limited to 50 characters.'
     };
 

@@ -53,6 +53,11 @@
                     "type": "string",
                     "default": "${workspaceFolder}/system/user/templates/default_site",
                     "description": "The path to your projects template directory"
+                },
+                "ee.userPath": {
+                    "type": "string",
+                    "default": "${workspaceFolder}/system/user/",
+                    "description": "The path to your projects user directory"
                 }
             }
         },
