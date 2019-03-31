@@ -24,6 +24,10 @@ export default class CreateTemplateVariable {
       templateVariableName = input;
     });
 
+    if (templateVariableName === undefined || templateVariableName.trim().length === 0) {
+      return;
+    }
+
     // If everything passed go ahead and create the template and group if needed
     let userFile = `${templatePath}/_variables/${templateVariableName}.html`;
     fs.openSync(userFile, 'a');
