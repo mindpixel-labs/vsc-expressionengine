@@ -53,4 +53,4 @@ We do not want to reject a pull request that had major effort or work involved b
 Enjoy!
 
 ## Disclaimer
-This is an unofficial Visual Studio Code Extension and is in no way affiliated, sponsored by or approved by EllisLab Corp, the makers of ExpressionEngine CMS.
+This is an unofficial Visual Studio Code Extension and is in no way affiliated, sponsored by or approved by EllisLab Corp, the makers of ExpressionEngine CMS. The ExpressionEngine mark is owned registered by EllisLab, Inc.
