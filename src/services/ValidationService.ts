@@ -110,11 +110,11 @@ export default class ValidationService {
     });
 
     Validator.register('valid_addon_name', (value, requirement, attribute) => {
-      return /^\b[^_][a-z_]*\b$/.test(value as string);
+      return /^\b[^_0-9][a-z_]*[^_0-9]$/.test(value as string);
     });
 
     Validator.register('valid_vendor_name', (value, requirement, attribute) => {
-      return /^\b[A-Z][a-z][^_]\w+\b$/.test(value as string);
+      return /^\b[A-Z][a-z][^_0-9]*\b$/.test(value as string);
     });
   }
 
