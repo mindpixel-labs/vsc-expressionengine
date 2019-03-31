@@ -4,7 +4,6 @@ import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
 import FormatService from '../../services/FormatService';
 import * as path from 'path';
-const copy = require('copy-template-dir');
 
 export default class CreateTemplatePartial {
 
@@ -35,6 +34,7 @@ export default class CreateTemplatePartial {
     addonType = selection.label;
 
     // Create validator service instance and get user add-ons directory
+    const copy = require('copy-template-dir');
     let validator   = new ValidationService,
         formatter   = new FormatService,
         addonDir    = WorkspaceService.getUserDirectory('addons'),
