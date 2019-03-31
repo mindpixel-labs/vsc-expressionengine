@@ -34,7 +34,6 @@ export default class CreateTemplatePartial {
     addonType = selection.label;
 
     // Create validator service instance and get user add-ons directory
-    const copy = require('copy-template-dir');
     let validator   = new ValidationService,
         formatter   = new FormatService,
         addonDir    = WorkspaceService.getUserDirectory('addons'),
@@ -89,6 +88,8 @@ export default class CreateTemplatePartial {
       ADDON_NAME_LOWERCASE: addonName.toLowerCase(),
       NAMESPACE: `${vendorName}\\${formatter.toClassName(addonName)}`
     };
+
+    const copy = require('copy-template-dir');
     
     // Parse template files and copy to the user add-ons directory
     copy(templateToCopy, addonDir, vars, (err:any, createdFiles:Array<any>) => {

@@ -3,6 +3,7 @@
 .gitignore
 vsc-extension-quickstart.md
 docs/images/vsc-ee-syntax.png
+webpack.config.json
 out/test/**
 src/**
 **/tsconfig.json
