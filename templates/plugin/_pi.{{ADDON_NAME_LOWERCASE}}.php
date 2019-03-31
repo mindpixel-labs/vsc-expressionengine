@@ -1,7 +1,7 @@
 <?php
 
 /**
- * {{ADDON_NAME}} Class
+ * {{CLASS_NAME}} Class
  *
  * @package     ExpressionEngine
  * @category    Plugin
@@ -13,7 +13,7 @@
 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class {{ADDON_NAME}}
+class {{CLASS_NAME}}
 {
     public static $name         = '{{ADDON_NAME}}';
     public static $version      = '1.0.0';
@@ -31,7 +31,7 @@ class {{ADDON_NAME}}
      * Plugin method
      * 
      * The base
-     * {exp:{{ADDON_NAME}}:method}
+     * {exp:{{ADDON_NAME_LOWERCASE}}:method}
      */
     public function method(){
 
@@ -46,5 +46,5 @@ class {{ADDON_NAME}}
 }
 
 
-/* End of file pi.utilities.php */
-/* Location: ./system/user/addons/{{ADDON_NAME}}/pi.{{ADDON_NAME}}.php */
+/* End of file pi.{{ADDON_NAME_LOWERCASE}}.php */
+/* Location: ./system/user/addons/{{ADDON_NAME_LOWERCASE}}/pi.{{ADDON_NAME_LOWERCASE}}.php */

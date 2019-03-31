@@ -2,7 +2,9 @@ import * as vscode from 'vscode';
 import { AddonModel } from '../../models/addon';
 import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
+import FormatService from '../../services/FormatService';
 import * as path from 'path';
+const copy = require('copy-template-dir');
 
 export default class CreateTemplatePartial {
 
@@ -16,23 +18,13 @@ export default class CreateTemplatePartial {
       return;
     }
 
-    let copy                  = require('copy-template-dir'),
-        extensionDir          : string = '',
-        extensionTemplateDir  : string = '';
-
-    const Extension = vscode.extensions.getExtension('mindpixel-labs.vsc-expressionengine');
-
-    if(Extension !== undefined) {
-      extensionTemplateDir = path.join(Extension.extensionPath, 'templates');
-    }
- 
-    // copy(inDir, outDir, vars, (err:any, createdFiles:Array<any>) => {
-    //   console.log(err);
-    // })
+    let userAddonDir      : string,
+    extensionDir          : string = '',
+    templateToCopy        : string = '';
 
     // Show selection list for user to choose their add-on type
     let selection = await vscode.window.showQuickPick(AddonModel, { canPickMany: false }),
-        addonType: string = '';
+        addonType : string = '';
 
     // Ensure the user input is not empty
     if (selection === undefined) {
@@ -44,6 +36,7 @@ export default class CreateTemplatePartial {
 
     // Create validator service instance and get user add-ons directory
     let validator   = new ValidationService,
+        formatter   = new FormatService,
         addonDir    = WorkspaceService.getUserDirectory('addons'),
         vendorName  : string|undefined,
         addonName   : string|undefined;
@@ -57,7 +50,8 @@ export default class CreateTemplatePartial {
     }).then((input) => {
       vendorName = input;
     });
-
+    
+    // Do not continue if the vendorName was blank
     if (vendorName === undefined || vendorName.trim().length === 0) {
       return;
     }
@@ -72,8 +66,36 @@ export default class CreateTemplatePartial {
       addonName = input;
     });
 
+    // Do not continue if the addonName was blank
     if (addonName === undefined || addonName.trim().length === 0) {
       return;
     }
+    
+    // Set the add-ons directory path
+    addonDir = WorkspaceService.getUserDirectory(`addons/${addonName.toLowerCase()}`);
+
+    // Get the extension object
+    const Extension = vscode.extensions.getExtension('mindpixel-labs.vsc-expressionengine');
+
+    if(Extension !== undefined) {
+      templateToCopy = path.join(Extension.extensionPath, `templates/${addonType.toLowerCase()}`);
+    }
+
+    // Template variables
+    let vars = {
+      VENDOR_NAME: vendorName,
+      CLASS_NAME: formatter.capitalizeFirstLetter(addonName),
+      ADDON_NAME: addonName,
+      ADDON_NAME_LOWERCASE: addonName.toLowerCase()
+    };
+    
+    // Parse template files and copy to the user add-ons directory
+    copy(templateToCopy, addonDir, vars, (err:any, createdFiles:Array<any>) => {
+      if (err) {
+        vscode.window.showErrorMessage(err as string);
+        console.log(err as string);
+      }
+    });
+
   }
 }
