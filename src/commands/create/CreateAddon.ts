@@ -86,7 +86,8 @@ export default class CreateTemplatePartial {
       VENDOR_NAME: vendorName,
       CLASS_NAME: formatter.capitalizeFirstLetter(addonName),
       ADDON_NAME: addonName,
-      ADDON_NAME_LOWERCASE: addonName.toLowerCase()
+      ADDON_NAME_LOWERCASE: addonName.toLowerCase(),
+      NAMESPACE: `${vendorName}\\${formatter.toClassName(addonName)}`
     };
     
     // Parse template files and copy to the user add-ons directory
