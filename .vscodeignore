@@ -1,7 +1,7 @@
 .github
+.gitignore
 .vscode/**
 .vscode-test/**
-.gitignore
 vsc-extension-quickstart.md
 docs/images/vsc-ee-syntax.png
 webpack.config.json
