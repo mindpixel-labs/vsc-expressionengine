@@ -13,12 +13,11 @@
 return [
       'author'         => '{{VENDOR_NAME}}',
       'author_url'     => '',
-      'name'           => '{{CLASS_NAME}}',
+      'name'           => '{{ADDON_NAME}}',
       'description'    => '',
-      'version'        => '1.0.0',
-      'docs_url'       => '',
-      'namespace'      => '{{NAMESPACE}}'
+      'version'        => '0.1.0',
+      'namespace'      => '{{NAMESPACE}}',
+      'settings_exist' => FALSE
 ];
 
-/* End of file addon.setup.php */
-/* Location: ./system/user/addons/{{ADDON_NAME_LOWERCASE}}/addon.setup.php */
+return $info;

@@ -26,6 +26,7 @@ export default class CreateTemplatePartial {
     if (templatePatialName === undefined || templatePatialName.trim().length === 0) {
       return;
     }
+
     // If everything passed go ahead and create the template partial
     let userFile = `${templatePath}/_partials/${templatePatialName}.html`;
     fs.openSync(userFile, 'a');

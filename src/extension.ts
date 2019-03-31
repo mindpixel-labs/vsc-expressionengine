@@ -6,7 +6,6 @@ import CreateTemplate from './commands/create/CreateTemplate';
 import CreateTemplatePartial from './commands/create/CreateTemplatePartial';
 import CreateTemplateVariable from './commands/create/CreateTemplateVariable';
 import CreateAddon from './commands/create/CreateAddon';
-import WorkspaceService from './services/WorkspaceService';
 
 /**
  * Activate
