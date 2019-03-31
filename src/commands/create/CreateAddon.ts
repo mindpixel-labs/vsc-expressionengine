@@ -5,7 +5,7 @@ import ValidationService from '../../services/ValidationService';
 import FormatService from '../../services/FormatService';
 import * as path from 'path';
 
-export default class CreateTemplatePartial {
+export default class CreateAddon {
 
   /**
    * Run the command logic
