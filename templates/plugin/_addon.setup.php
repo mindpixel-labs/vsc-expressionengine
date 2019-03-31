@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Module Setup File
+| Add-on Setup File
 |--------------------------------------------------------------------------
 |
 | Provides descriptive data about add-on author, name, and version
@@ -10,8 +10,7 @@
 |
 */
 
-
-$info = array(
+return [
       'author'         => '{{VENDOR_NAME}}',
       'author_url'     => '',
       'name'           => '{{CLASS_NAME}}',
@@ -19,9 +18,7 @@ $info = array(
       'version'        => '1.0.0',
       'docs_url'       => '',
       'namespace'      => '{{VENDOR_NAME}}\{{CLASS_NAME}}'
-);
-
-return $info;
+];
 
 /* End of file addon.setup.php */
 /* Location: ./system/user/addons/{{ADDON_NAME_LOWERCASE}}/addon.setup.php */
