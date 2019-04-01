@@ -51,7 +51,7 @@ export default class WorkspaceService {
       workspaceFolder = vscode.workspace.workspaceFolders[0].uri.path;
     }
 
-    return config.get('templatePath', '${workspaceFolder}/system/user/templates/default_site').replace('${workspaceFolder}', workspaceFolder).replace(/\/$/, '');
+    return this.getUserDirectory('templates/default_site');
   }
 
   /**
