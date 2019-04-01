@@ -10,7 +10,7 @@ class {{CLASS_NAME}}_ext {
     /**
      * Version
      */
-    public $version = '0.1.0';
+    public $version = '1.0.0';
 
     /**
      * Description
@@ -54,9 +54,9 @@ class {{CLASS_NAME}}_ext {
      */
     function activate_extension()
     {
-        // All extension hooks
+        // Register extension hooks
         $hooks = [
-          'ee_hook' => 'my_hook'
+          'hook' => 'method_to_execute'
         ];
 
         foreach($hooks as $hook => $method) {
@@ -77,11 +77,11 @@ class {{CLASS_NAME}}_ext {
     /**
      * Example Hook
      *
-     * Set the emails via the POST data based on the store location
+     * Method to fire when the hook is called
      *
      * @return void
      */
-    public function my_hook()
+    public function method_to_execute()
     {
       // Logic here
     }
@@ -98,6 +98,33 @@ class {{CLASS_NAME}}_ext {
       $settings = [];
 
       return $settings;
+    }
+
+    /**
+     * Update Extension
+     *
+     * This function performs any necessary db updates when the extension
+     * page is visited
+     *
+     * @return  mixed   void on update / false if none
+     */
+    public function update_extension($current = '')
+    {
+        if ($current == '' OR $current == $this->version)
+        {
+            return FALSE;
+        }
+
+        if ($current < '1.0.0')
+        {
+            // Update to version 1.0.0
+        }
+
+        ee()->db->where('class', __CLASS__);
+        ee()->db->update(
+                    'extensions',
+                    array('version' => $this->version)
+        );
     }
 
     /**
