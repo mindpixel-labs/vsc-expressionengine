@@ -106,7 +106,7 @@ export default class CreateAddon {
     const copy = require('copy-template-dir');
     
     // Parse template files and copy to the user add-ons directory
-    await copy(templateToCopy, addonDir, vars, (err:any, createdFiles:Array<any>) => {
+    copy(templateToCopy, addonDir, vars, (err:any, createdFiles:Array<any>) => {
       if (err) {
         vscode.window.showErrorMessage(err as string);
         console.log(err as string);
