@@ -1,5 +1,4 @@
 <br>
-<br>
 <div align="center">
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/ee-logo-lg.png)
