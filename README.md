@@ -1,13 +1,21 @@
+<br>
+<br>
+<div align="center">
+
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/ee-logo-lg.png)
+
 # vsc-expressionengine
 ![](https://img.shields.io/badge/Status-Maintained-brightgreen.svg)
 ![](https://img.shields.io/visual-studio-marketplace/v/mindpixel-labs.vsc-expressionengine.svg?color=brightgreen&label=Visual%20Studio%20Marketplace&logo=Visual%20Studio%20Code)
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-The ultimate **ExpressionEngine CMS** extension for Visual Studio Code with scaffolding commands to generate add-ons, template files, syntax highlighting and snippets.
+The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons, template files, syntax highlighting and snippets.
 
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax.png)
+
+</div>
 
 ## Getting Started
 Make sure to update your user **settings.json** to include the extensions language indentifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
