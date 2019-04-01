@@ -9,7 +9,7 @@
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons, template files, syntax highlighting and snippets.
+The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting and snippets.
 
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax.png)
@@ -30,7 +30,7 @@ By default, this extension assumes the directory to your add-ons and template fi
 
 **Example:** `<project-directory>/system/user/**`
 
-If you have changed your projects directory structure you have the option to override this within your user **settings.json** file. Make sure to include the **${workspaceFolder}** variable at the begining of the path so the projects full path you currently have open within the workspace will be dynamically resolved.
+If you have changed your projects directory structure you have the option to override this within your user **settings.json** file. Make sure to include the **${workspaceFolder}** variable at the begining of the path so the projects path you currently have open within the workspace will be dynamically resolved.
 
 ```javascript
   "ee.userPath" : "${workspaceFolder}/system/user"
