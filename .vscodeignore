@@ -3,10 +3,9 @@
 .vscode/**
 .vscode-test/**
 vsc-extension-quickstart.md
-docs/images/vsc-ee-syntax.png
 docs/images/ee-logo-lg.png
 docs/images/vsc-ee-addon.gif
-docs/images/ee-syntax-snippets.gif
+docs/images/vsc-ee-syntax-snippets.gif
 webpack.config.json
 out/test/**
 src/**

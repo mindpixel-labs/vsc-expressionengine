@@ -20,7 +20,7 @@ The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with
 
 ### Snippets and Syntax Highlighting
 
-![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/ee-syntax-snippets.gif)
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/vsc-ee-syntax-snippets.gif)
 
 </div>
 

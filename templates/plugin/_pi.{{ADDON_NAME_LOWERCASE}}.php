@@ -34,14 +34,7 @@ class {{CLASS_NAME}}
      * {exp:{{ADDON_NAME_LOWERCASE}}:method}
      */
     public function method(){
-
-        // Variables Array
-        $variables = [];
-        
-        // Set Total Results Variable
-        $variables[0]['title'] = 'It works!';
-
-        return ee()->TMPL->parse_variables( ee()->TMPL->tagdata, $variables );
+        // Implement your logic
     }
 }
 
