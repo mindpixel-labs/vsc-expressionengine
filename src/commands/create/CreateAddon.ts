@@ -4,7 +4,6 @@ import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
 import FormatService from '../../services/FormatService';
 import * as path from 'path';
-import { SSL_OP_CISCO_ANYCONNECT } from 'constants';
 
 export default class CreateAddon {
 
