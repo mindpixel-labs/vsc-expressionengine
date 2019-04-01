@@ -4,6 +4,7 @@ import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
 import FormatService from '../../services/FormatService';
 import * as path from 'path';
+import { SSL_OP_CISCO_ANYCONNECT } from 'constants';
 
 export default class CreateAddon {
 
@@ -89,15 +90,33 @@ export default class CreateAddon {
       NAMESPACE: `${vendorName}\\${formatter.toClassName(addonName)}`
     };
 
+    let { ADDON_NAME_LOWERCASE } = vars;
+
+    interface FileMapInterface {
+      [key: string]: string
+    }
+
+    let fileName: FileMapInterface = {
+      Extension   : `ext.${ADDON_NAME_LOWERCASE}.php`,
+      Module      : `mod.${ADDON_NAME_LOWERCASE}.php`,
+      Plugin      : `pi.${ADDON_NAME_LOWERCASE}.php`
+    };
+
+    let fileToOpen = path.join(addonDir, fileName[addonType]);
+
     const copy = require('copy-template-dir');
     
     // Parse template files and copy to the user add-ons directory
-    copy(templateToCopy, addonDir, vars, (err:any, createdFiles:Array<any>) => {
+    await copy(templateToCopy, addonDir, vars, (err:any, createdFiles:Array<any>) => {
       if (err) {
         vscode.window.showErrorMessage(err as string);
         console.log(err as string);
+      } else {
+          // Open up the main file
+          vscode.workspace.openTextDocument(fileToOpen).then(doc => {
+            vscode.window.showTextDocument(doc);
+          });
       }
     });
-
   }
 }
