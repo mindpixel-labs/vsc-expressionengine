@@ -28,12 +28,12 @@ Make sure to update your user **settings.json** to include the extensions langua
 ## Setup ExpressionEngine Paths
 By default, this extension assumes the directory to your add-ons and template files will be based on a fresh install of an ExpressionEngine site.
 
-Example: `<project-directory>/system/user/**`
+**Example:** `<project-directory>/system/user/**`
 
-If you have changed your projects directory structure you have the option to define this within your user **settings.json** file. By including the **${workspaceFolder}** variable at the begining will allow the project path you currently have open within the workspace to be dynamically resolved.
+If you have changed your projects directory structure you have the option to override this within your user **settings.json** file. Make sure to include the **${workspaceFolder}** variable at the begining of the path so the projects full path you currently have open within the workspace will be dynamically resolved.
 
 ```javascript
-	"ee.userPath" : "${workspaceFolder}/system/user"
+  "ee.userPath" : "${workspaceFolder}/system/user"
 ```
 
 The above example would resolve to something like: `/Users/your-name/sites/my-site/system/user`
