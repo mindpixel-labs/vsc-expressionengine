@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import * as path from 'path';
 
 export default class WorkspaceService {
 
@@ -18,10 +19,10 @@ export default class WorkspaceService {
 
   /**
    * getUserDirectory
-   * @param {string} path An optional setting to return a directory
+   * @param {string} dirPath An optional setting to return a directory
    * @return {string} The users template directory path
    */
-  public static getUserDirectory(path?:string): string {
+  public static getUserDirectory(dirPath:string = ''): string {
     let workspaceFolder: string = '',
         config = vscode.workspace.getConfiguration('ee');
 
@@ -32,11 +33,7 @@ export default class WorkspaceService {
     // Set the directory and replace any trailing forward slashes
     let directory =  config.get('userPath', '${workspaceFolder}/system/user').replace('${workspaceFolder}', workspaceFolder).replace(/\/$/, '');
 
-    if(path !== undefined && path !== '') {
-      directory = `${directory}/${path}`;
-    }
-
-    return directory;
+    return path.join(directory, dirPath);
   }
 
   /**
