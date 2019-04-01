@@ -11,8 +11,10 @@
 
 The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting and snippets.
 
+<br>
 
-![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax.png)
+
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/vsc-ee-addon.gif)
 
 </div>
 
