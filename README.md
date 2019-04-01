@@ -4,9 +4,8 @@
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-The ultimate **ExpressionEngine CMS** extension for Visual Studio Code with syntax highlighting and snippets.
+The ultimate **ExpressionEngine CMS** extension for Visual Studio Code with scaffolding commands to generate add-ons, template files, syntax highlighting and snippets.
 
-This is a port of our atom-expressionengine package for Atom Editor. New features and improvements are planned.
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax.png)
 
@@ -18,6 +17,19 @@ Make sure to update your user **settings.json** to include the extensions langua
         "ee": "html"
     }
 ```
+
+## Setup ExpressionEngine Paths
+By default, this extension assumes the directory to your add-ons and template files will be based on a fresh install of an ExpressionEngine site.
+
+Example: `<project-directory>/system/user/**`
+
+If you have changed your projects directory structure you have the option to define this within your user **settings.json** file. By including the **${workspaceFolder}** variable at the begining will allow the project path you currently have open within the workspace to be dynamically resolved.
+
+```javascript
+	"ee.userPath" : "${workspaceFolder}/system/user"
+```
+
+The above example would resolve to something like: `/Users/your-name/sites/my-site/system/user`
 
 ## Customizing Colors
 You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
@@ -34,6 +46,10 @@ You can customize your active color theme by adding the `editor.tokenColorCustom
 ```
 
 View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
+
+## Development Roadmap
+- Our next major release will include IntelliSense and code completion.
+- Improving embedded ExpressionEngine tag syntax highlighting within HTML markup
 
 ## Documentation
 View the full [wiki](https://github.com/mindpixel-labs/vsc-expressionengine/wiki) to learn about all the available options.

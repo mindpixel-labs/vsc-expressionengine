@@ -4,6 +4,7 @@
 .vscode-test/**
 vsc-extension-quickstart.md
 docs/images/vsc-ee-syntax.png
+docs/images/ee-logo-lg.png
 webpack.config.json
 out/test/**
 src/**
