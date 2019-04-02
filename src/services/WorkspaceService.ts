@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import * as fs from 'fs';
 import * as path from 'path';
 
 export default class WorkspaceService {
@@ -64,5 +65,18 @@ export default class WorkspaceService {
     } else {
       return true;
     }
+  }
+
+  /**
+   * siteDirectoryExists
+   * 
+   * @return {boolean} Checks if an ExpressionEngine site exists within the workspace
+   */
+  public static hasUserDirectory(): boolean {
+    if (!fs.existsSync(this.getUserDirectory())) {
+      vscode.window.showWarningMessage('The workspace you have open does not appear to contain an ExpressionEngine site. Make sure your ee.userPath is set properly in settings.json');
+      return false;
+    }
+    return true;
   }
 }
