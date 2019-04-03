@@ -15,13 +15,6 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class {{CLASS_NAME}}
 {
-    public static $name         = '{{ADDON_NAME}}';
-    public static $version      = '1.0.0';
-    public static $author       = '{{VENDOR_NAME}}';
-    public static $author_url   = '';
-    public static $description  = '';
-    public static $typography   = FALSE;
-
     /**
      * Class constructor
     */
