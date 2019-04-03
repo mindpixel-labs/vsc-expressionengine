@@ -1,6 +1,6 @@
 <?php
 
-use {{VENDOR_NAME}}\{{CLASS_NAME}}\Services\ModuleService;
+use {{NAMESPACE}}\Services\ModuleService;
 
 class {{CLASS_NAME}}
 {

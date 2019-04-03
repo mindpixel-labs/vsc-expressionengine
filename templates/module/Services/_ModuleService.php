@@ -1,6 +1,6 @@
 <?php
 
-namespace {{VENDOR_NAME}}\{{CLASS_NAME}}\Services;
+namespace {{NAMESPACE}}\Services;
 
 class ModuleService
 {
