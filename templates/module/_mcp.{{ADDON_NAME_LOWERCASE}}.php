@@ -4,5 +4,5 @@ class {{CLASS_NAME}}_mcp {
 
 }
 
-/* End of file mcp.metadata.php */
+/* End of file mcp.{{ADDON_NAME_LOWERCASE}}.php */
 /* Location: ./system/user/addons/{{ADDON_NAME_LOWERCASE}}/mcp.{{ADDON_NAME_LOWERCASE}}.php */

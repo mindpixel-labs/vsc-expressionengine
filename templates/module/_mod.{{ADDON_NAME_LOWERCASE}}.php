@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * {{CLASS_NAME}} Class
+ *
+ * @package     ExpressionEngine
+ * @category    Module
+ * @author      {{VENDOR_NAME}}
+ * @copyright   Copyright (c) {{VENDOR_NAME}}
+ * @link        http://github.com/
+ */
+
 use {{NAMESPACE}}\Services\ModuleService;
 
 class {{CLASS_NAME}}

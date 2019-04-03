@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * {{CLASS_NAME}}_ext Class
+ *
+ * @package     ExpressionEngine
+ * @category    Extension
+ * @author      {{VENDOR_NAME}}
+ * @copyright   Copyright (c) {{VENDOR_NAME}}
+ * @link        http://github.com/
+ */
+
 class {{CLASS_NAME}}_ext {
 
     /**
