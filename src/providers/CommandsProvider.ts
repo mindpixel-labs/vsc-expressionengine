@@ -23,6 +23,7 @@ export default class CommandsProvider {
       subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplateVariable', CreateTemplateVariable.run));
   
       subscriptions.push(vscode.commands.registerCommand('extension.ee.createAddon', CreateAddon.run));
+
     }
   }
 }
