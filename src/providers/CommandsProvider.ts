@@ -13,7 +13,9 @@ export default class CommandsProvider {
   */
   public static register(context?: vscode.ExtensionContext) {
     if(context !== undefined) {
+
       let subscriptions = context.subscriptions;
+
       subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplate', CreateTemplate.run));
   
       subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplatePartial', CreateTemplatePartial.run));
