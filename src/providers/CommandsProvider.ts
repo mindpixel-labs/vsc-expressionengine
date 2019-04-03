@@ -9,7 +9,7 @@ export default class CommandsProvider {
   constructor(){}
 
   /**
-   * Register the language indentation rules
+   * Register commands
   */
   public static register(context?: vscode.ExtensionContext) {
     if(context !== undefined) {
