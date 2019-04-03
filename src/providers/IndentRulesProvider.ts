@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
 
-export default class IndentRulesProvider {
+export default class IndentRulesProvider{
 
   constructor() {}
 
   /**
    * Register the language indentation rules
   */
-  public register() {
+  public static register(context?: vscode.ExtensionContext) {
     vscode.languages.setLanguageConfiguration('ee', {
       onEnterRules: [
         {

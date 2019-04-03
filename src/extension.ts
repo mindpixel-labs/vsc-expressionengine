@@ -13,15 +13,8 @@ import CommandsProvider from './providers/CommandsProvider';
  * @param context 
  */
 export function activate(context: vscode.ExtensionContext) {
-
-  let extensionIndentationRules   = new IndentRulesProvider(),
-      extensionCommands           = new CommandsProvider(context);
-
-      // Register language indentation rules
-      extensionIndentationRules.register();
-
-      // Register language commands
-      extensionCommands.register();
+  IndentRulesProvider.register(context);
+  CommandsProvider.register(context);
 }
 
 /**
