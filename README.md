@@ -44,6 +44,8 @@ If you have changed your projects directory structure you have the option to ove
 
 The above example would resolve to something like: `/Users/your-name/sites/my-site/system/user`
 
+**Note:** Only one workspace is supported at this time.
+
 ## Customizing Colors
 You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
 
