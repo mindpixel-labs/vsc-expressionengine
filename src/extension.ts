@@ -2,10 +2,8 @@
  * Imports
 */
 import * as vscode from 'vscode';
-import CreateTemplate from './commands/create/CreateTemplate';
-import CreateTemplatePartial from './commands/create/CreateTemplatePartial';
-import CreateTemplateVariable from './commands/create/CreateTemplateVariable';
-import CreateAddon from './commands/create/CreateAddon';
+import IndentRulesProvider from './providers/IndentRulesProvider';
+import CommandsProvider from './providers/CommandsProvider';
 
 /**
  * Activate
@@ -14,16 +12,16 @@ import CreateAddon from './commands/create/CreateAddon';
  * 
  * @param context 
  */
-export function activate(context: vscode.ExtensionContext) {  
+export function activate(context: vscode.ExtensionContext) {
 
-  context.subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplate', CreateTemplate.run));
+  let extensionIndentationRules   = new IndentRulesProvider(),
+      extensionCommands           = new CommandsProvider(context);
 
-  context.subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplatePartial', CreateTemplatePartial.run));
+      // Register language indentation rules
+      extensionIndentationRules.register();
 
-  context.subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplateVariable', CreateTemplateVariable.run));
-
-  context.subscriptions.push(vscode.commands.registerCommand('extension.ee.createAddon', CreateAddon.run));
-
+      // Register language commands
+      extensionCommands.register();
 }
 
 /**

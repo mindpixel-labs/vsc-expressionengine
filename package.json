@@ -14,10 +14,7 @@
         "Snippets"
     ],
     "activationEvents": [
-        "onCommand:extension.ee.createTemplate",
-        "onCommand:extension.ee.createTemplatePartial",
-        "onCommand:extension.ee.createTemplateVariable",
-        "onCommand:extension.ee.createAddon"
+        "*"
     ],
     "main": "./dist/extension.js",
     "repository": {
