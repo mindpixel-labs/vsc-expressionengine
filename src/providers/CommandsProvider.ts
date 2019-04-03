@@ -12,7 +12,11 @@ export default class CommandsProvider {
    * Register commands
   */
   public static register(context?: vscode.ExtensionContext) {
-    if(context !== undefined) {
+
+    if(context === undefined) {
+      vscode.window.showErrorMessage('A context was not provided to the registration method.');
+      return;
+    }
 
       let subscriptions = context.subscriptions;
 
@@ -23,7 +27,5 @@ export default class CommandsProvider {
       subscriptions.push(vscode.commands.registerCommand('extension.ee.createTemplateVariable', CreateTemplateVariable.run));
   
       subscriptions.push(vscode.commands.registerCommand('extension.ee.createAddon', CreateAddon.run));
-
-    }
   }
 }
