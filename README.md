@@ -23,7 +23,7 @@ The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with
 </div>
 
 ## Getting Started
-Make sure to update your user **settings.json** to include the extensions language indentifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
+Make sure to update your user **settings.json** to include the extensions language identifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
 
 ```javascript
     "emmet.includeLanguages": {
@@ -36,7 +36,7 @@ By default, this extension assumes the directory to your add-ons and template fi
 
 **Example:** `<project-directory>/system/user/**`
 
-If you have changed your projects directory structure you have the option to override this within your user **settings.json** file. Make sure to include the **${workspaceFolder}** variable at the begining of the path so the projects path you currently have open within the workspace will be dynamically resolved.
+If you have changed your projects directory structure you have the option to override this within your user **settings.json** file. Just include the **${workspaceFolder}** variable at the beginning of your definition so the project's path you currently have open within the workspace will be dynamically resolved.
 
 ```javascript
   "ee.userPath" : "${workspaceFolder}/system/user"
