@@ -18,7 +18,7 @@ export default class IndentRulesProvider {
           }
         },
         {
-          beforeText: /<(?!img)([a-zA-Z]+)+(>|.*?[^?]>)/i,
+          beforeText: /<(?!area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr|)([a-zA-Z]+)+(>|.*?[^?]>)/i,
           action: {
             indentAction: vscode.IndentAction.Indent
           }
