@@ -61,7 +61,7 @@ You can customize your active color theme by adding the `editor.tokenColorCustom
 View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
 
 ## Commands
-All commands start within the `EE` namepace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase.
+All commands start within the `EE` namepace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appear to be long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
 
 Command | Description
 --- | ---
