@@ -66,11 +66,11 @@ View the full list of available [scope names](https://github.com/mindpixel-labs/
 All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appears long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
 
 | Command | Description |
-|---| --- |
-<sub>EE: Create Add-on Boilerplate</sub> | <sub>Presents a list of options to create either an Extension, Module or Plugin. The vendor and add-on name will also be requested.</sub> |
-<sub>EE: Create Template</sub> | <sub>Presents a list of options to create a template. A template type either `.html`, `.css`, `.js`, `.feed`, or `.xml` will be requested. You can then proceed to enter in the template group and then the template file name. </sub>|
-<sub>EE: Create Template Variable</sub> | <sub>A single input requesting a template variable name will be requested and then stored inside of the `_variables` folder. The `.html` extension will be automatically| appended and can be omitted. </sub>|
-<sub>EE: Create Template Partial</sub>| <sub>A single input requesting a template partial name will be requested. The `.html` extension will be automatically appended and can be omitted.</sub>|
+|--- | --- |
+<sub>EE: Create Add-on Boilerplate</sub> | <sub>List of options with Extension, Module or Plugin.</sub> |
+<sub>EE: Create Template</sub> | <sub>A template type either `.html`, `.css`, `.js`, `.feed`, or `.xml`</sub>|
+<sub>EE: Create Template Variable</sub> | <sub>Input requesting a template variable name. Wills save to `_variables`. </sub>|
+<sub>EE: Create Template Partial</sub>| <sub>Input requesting a template partial name.</sub>|
 
 ## Development Roadmap
 - Our next major release will include IntelliSense and code completion.
