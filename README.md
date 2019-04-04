@@ -67,7 +67,7 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 
 | Command | Description |
 |--- | --- |
-<sub>EE: Create Add-on Boilerplate</sub> | <sub>List of options with Extension, Module or Plugin.</sub> |
+<sub>EE: Create Add-on Boilerplate</sub> | <sub>List of options to create an Extension, Module or Plugin.</sub> |
 <sub>EE: Create Template</sub> | <sub>A template type either `.html`, `.css`, `.js`, `.feed`, or `.xml`</sub>|
 <sub>EE: Create Template Variable</sub> | <sub>Input requesting a template variable name. Wills save to `_variables`. </sub>|
 <sub>EE: Create Template Partial</sub>| <sub>Input requesting a template partial name.</sub>|
