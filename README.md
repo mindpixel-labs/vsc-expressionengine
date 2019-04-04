@@ -14,11 +14,11 @@ The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with
 ### Generate Add-ons
 
 
-![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/vsc-ee-addon.gif)
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-addon.gif)
 
 ### Snippets and Syntax Highlighting
 
-![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.0.0/docs/images/vsc-ee-syntax-snippets.gif)
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax-snippets.gif)
 
 </div>
 
