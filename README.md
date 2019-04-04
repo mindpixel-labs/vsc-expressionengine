@@ -67,10 +67,10 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 
 | Command | Description |
 |---| --- |
-```EE: Create Add-on Boilerplate``` | Presents a list of options to create either an Extension, Module or Plugin. The vendor and add-on name will also be requested.|
-```EE: Create Template``` | Presents a list of options to create a template. A template type either `.html`, `.css`, `.js`, |`.feed`, or `.xml` will be requested. You can then proceed to enter in the template group and then the template file name.|
-```EE: Create Template Variable``` | A single input requesting a template variable name will be requested and then stored inside of the `_variables` folder. The `.html` extension will be automatically| appended and can be omitted.|
-```EE: Create Template Partial``` | A single input requesting a template partial name will be requested. The `.html` extension will be automatically appended and can be omitted.|
+```EE: Create Add-on Boilerplate``` | <sub>Presents a list of options to create either an Extension, Module or Plugin. The vendor and add-on name will also be requested.</sub> |
+```EE: Create Template``` | <sub>Presents a list of options to create a template. A template type either `.html`, `.css`, `.js`, `.feed`, or `.xml` will be requested. You can then proceed to enter in the template group and then the template file name. </sub>|
+```EE: Create Template Variable``` | <sub>A single input requesting a template variable name will be requested and then stored inside of the `_variables` folder. The `.html` extension will be automatically| appended and can be omitted. </sub>|
+```EE: Create Template Partial``` | <sub>A single input requesting a template partial name will be requested. The `.html` extension will be automatically appended and can be omitted.</sub>|
 
 ## Development Roadmap
 - Our next major release will include IntelliSense and code completion.
