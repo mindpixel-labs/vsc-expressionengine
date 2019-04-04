@@ -61,6 +61,11 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 **Notes:**
 When creating template variables or partials you can omit the `.html` extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters. 
 
+--------------
+
+--------------
+
+**Known Limitations:**
 Also, after creating either a template, variable or partial you can still delete it from the sidebar tree in your editor as long as you don't refresh your local site either in the Control Panel or the front-end as this will cause EE to pull the latest files and sync to the database. The best option will for deleting or renaming your files is likely best done within the Control Panel.
 
 --------------
