@@ -68,7 +68,7 @@ When creating template variables or partials you can omit the `.html` extension 
 
 **Known Limitations:**
 
-After creating either a template, variable or partial you can still delete it from the sidebar tree in your editor as long as you don't refresh your local site either in the Control Panel or the front-end as this will cause EE to pull the latest files and sync to the database. The best option will for deleting or renaming your files is likely best done within the Control Panel.
+After creating either a template, variable or partial you can still delete it from the sidebar tree in your editor as long as you don't refresh your local site either in the Control Panel or the front-end as this will cause EE to pull the latest files and sync to the database. The best option for deleting or renaming your files is likely best done within the Control Panel.
 
 --------------
 
