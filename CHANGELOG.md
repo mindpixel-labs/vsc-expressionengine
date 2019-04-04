@@ -5,6 +5,10 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 1.1.5 - 2019-4-4
+### Bug Fixes
+- Added a fix where a template group/template would not be created unless the group already existed.
+
 ## 1.1.4 - 2019-4-4
 ### Updated package.json description to remove the <br> tag that copied over from the README.md
 
