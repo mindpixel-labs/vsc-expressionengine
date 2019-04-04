@@ -75,7 +75,7 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 --------------
 
 **Note:**
-When creating template variables or partials, you can omit the .html extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters.
+When creating template variables or partials you can omit the `.html` extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters.
 
 --------------
 
