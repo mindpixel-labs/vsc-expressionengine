@@ -5,6 +5,13 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 - 2019-4-4
+### New Scaffolding Commands and Language Features!
+- Added new scaffolding commands to generate ExpressionEngine boilerplate for Extensions, Plugins, Modules, Templates, Variables and Partials
+- Added syntax highlighting improvements
+- Added new indentation feature to allow for HTML to correctly indent and outdent lines when creating elements
+- Overall code refactor and major performance boosts by switching to Webpack for the production build
+
 ## 0.0.7 - 2019-3-25
 ### Update layout.json
 - Added fix for the layout tag pair where closing tag was missing a forward slash
