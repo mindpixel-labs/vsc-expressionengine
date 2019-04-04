@@ -46,8 +46,6 @@ The above example would resolve to something like: `/Users/your-name/sites/my-si
 
 **Note:** Only one workspace is supported at this time.
 
-View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
-
 ## Commands
 All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appears long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
 
@@ -78,6 +76,8 @@ You can customize your active color theme by adding the `editor.tokenColorCustom
         }]
     }
 ```
+
+View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
 
 ## Development Roadmap
 - Our next major release will include IntelliSense and code completion.
