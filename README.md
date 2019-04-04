@@ -46,20 +46,6 @@ The above example would resolve to something like: `/Users/your-name/sites/my-si
 
 **Note:** Only one workspace is supported at this time.
 
-## Customizing Colors
-You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
-
-```javascript
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [{
-            "scope": "entity.name.tag.ee",
-            "settings": {
-                "foreground": "#B67FFF"
-            }
-        }]
-    }
-```
-
 View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
 
 ## Commands
@@ -78,6 +64,20 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 When creating template variables or partials you can omit the `.html` extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters.
 
 --------------
+
+## Customizing Colors
+You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
+
+```javascript
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [{
+            "scope": "entity.name.tag.ee",
+            "settings": {
+                "foreground": "#B67FFF"
+            }
+        }]
+    }
+```
 
 ## Development Roadmap
 - Our next major release will include IntelliSense and code completion.
