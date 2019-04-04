@@ -72,6 +72,10 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 <sub>EE: Create Template Variable</sub> | <sub>Input requesting a template variable name. Outputs to your `_variables` directory.</sub>|
 <sub>EE: Create Template Partial</sub>| <sub>Input requesting a template partial name. Outputs to your `_partials` directory.</sub>|
 
+--------------
+**Note:**
+When creating template variables or partials, you can omit the .html extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters.
+
 ## Development Roadmap
 - Our next major release will include IntelliSense and code completion.
 - Improving embedded ExpressionEngine tag syntax highlighting within HTML markup
