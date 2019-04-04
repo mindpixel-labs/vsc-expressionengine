@@ -65,8 +65,8 @@ View the full list of available [scope names](https://github.com/mindpixel-labs/
 ## Commands
 All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appears long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
 
-| Command | Description |
-|------------- | --- |
+| Command               | Description |
+|-----------------------| --- |
 ```EE: Create Add-on Boilerplate``` | Presents a list of options to create either an Extension, Module or Plugin. The vendor and add-on name will also be requested.|
 ```EE: Create Template``` | Presents a list of options to create a template. A template type either `.html`, `.css`, `.js`, |`.feed`, or `.xml` will be requested. You can then proceed to enter in the template group and then the template file name.|
 ```EE: Create Template Variable``` | A single input requesting a template variable name will be requested and then stored inside of the `_variables` folder. The `.html` extension will be automatically| appended and can be omitted.|
