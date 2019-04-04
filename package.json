@@ -1,7 +1,7 @@
 {
     "name": "vsc-expressionengine",
     "displayName": "ExpressionEngine",
-    "description": "The ultimate ExpressionEngine CMS extension for Visual Studio Code with syntax highlighting and snippets.",
+    "description": "The ultimate ExpressionEngine CMS extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting and snippets.",
     "publisher": "mindpixel-labs",
     "version": "1.1.2",
     "license": "MIT",

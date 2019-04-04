@@ -5,6 +5,9 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 1.1.3 - 2019-4-4
+### Updated package.json to include new release description
+
 ## 1.1.2 - 2019-4-4
 ### Updated README.md image paths
 
