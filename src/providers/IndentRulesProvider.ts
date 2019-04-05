@@ -6,6 +6,10 @@ export default class IndentRulesProvider{
 
   /**
    * Register the language indentation rules
+   * Rule #1: beforeText Match an openning tag
+   * Rule #1: afterext Match a closing tag
+   * Rule #2: beforeText Match an opening tag but exclude single tags like <img>
+   * Rule #3: beforeText Match an opening tag that has the closing tag on the next line
   */
   public static register(context?: vscode.ExtensionContext) {
     vscode.languages.setLanguageConfiguration('ee', {
@@ -22,7 +26,14 @@ export default class IndentRulesProvider{
           action: {
             indentAction: vscode.IndentAction.Indent
           }
-        }
+        },
+        {
+          beforeText: />/i,
+          afterText: /^(?![\s\S])$/i,
+          action: {
+            indentAction: vscode.IndentAction.Indent
+          }
+        },
       ],
     });
   }
