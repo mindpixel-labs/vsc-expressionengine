@@ -7,6 +7,6 @@
       "\t$0",
       "{/exp:channel:entries}"
     ],
-    "description": "Add path variable"
+    "description": "Add channel entries tag"
   }
 }
