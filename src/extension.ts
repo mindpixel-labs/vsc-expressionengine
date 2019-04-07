@@ -4,6 +4,8 @@
 import * as vscode from 'vscode';
 import IndentRulesProvider from './providers/IndentRulesProvider';
 import CommandsProvider from './providers/CommandsProvider';
+import CompletionProvider from './providers/CompletionProvider';
+import ParametersProvider from './providers/ParameterProvider';
 
 /**
  * Activate
@@ -13,6 +15,8 @@ import CommandsProvider from './providers/CommandsProvider';
  * @param context 
  */
 export function activate(context: vscode.ExtensionContext) {
+  CompletionProvider.register(context);
+  ParametersProvider.register(context);
   IndentRulesProvider.register(context);
   CommandsProvider.register(context);
 }

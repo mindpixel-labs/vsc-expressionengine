@@ -123,10 +123,6 @@
             },
             {
                 "language": "ee",
-                "path": "./snippets/keywords.json"
-            },
-            {
-                "language": "ee",
                 "path": "./snippets/categories.json"
             },
             {

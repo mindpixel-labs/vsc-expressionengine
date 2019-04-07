@@ -34,6 +34,13 @@ export default class IndentRulesProvider{
             indentAction: vscode.IndentAction.Indent
           }
         },
+        {
+          beforeText: /}/i,
+          afterText: /^{/i,
+          action: {
+            indentAction: vscode.IndentAction.IndentOutdent
+          }
+        },
       ],
     });
   }
