@@ -33,7 +33,7 @@ export default class ParameterProvider {
             let proposal = new vscode.CompletionItem(item);
             proposal.kind = (vscode.CompletionItemKind.Property);
             proposal.documentation = 'Tomochan!';
-            proposal.insertText = new vscode.SnippetString(`${completion.item}="$1"`);
+            proposal.insertText = new vscode.SnippetString(`${item}="$1"`);
             return proposal;
           });
         }
