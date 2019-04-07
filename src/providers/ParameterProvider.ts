@@ -30,11 +30,11 @@ export default class ParameterProvider {
           }
 
           return completion.items.map((item: string) => {
-            let proposal = new vscode.CompletionItem(item);
-            proposal.kind = (vscode.CompletionItemKind.Property);
-            proposal.documentation = 'Tomochan!';
-            proposal.insertText = new vscode.SnippetString(`${item}="$1"`);
-            return proposal;
+            let completionItem              = new vscode.CompletionItem(item);
+            completionItem.kind             = (vscode.CompletionItemKind.Property);
+            completionItem.documentation    = '';
+            completionItem.insertText       = new vscode.SnippetString(`${item}="$1"`);
+            return completionItem;
           });
         }
       }, ':');
