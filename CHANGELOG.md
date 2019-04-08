@@ -10,16 +10,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added a fix where a template group/template would not be created unless the group already existed.
 
 ## 1.1.4 - 2019-4-4
-### Updated package.json description to remove the <br> tag that copied over from the README.md
+- Updated package.json description to remove the <br> tag that copied over from the README.md
 
 ## 1.1.3 - 2019-4-4
-### Updated package.json to include new release description
+- Updated package.json to include new release description
 
 ## 1.1.2 - 2019-4-4
-### Updated README.md image paths
+- Updated README.md image paths
 
 ## 1.1.1 - 2019-4-4
-### Corrected Change Log and added missing entries
+- Corrected Change Log and added missing entries
 
 ## 1.0.0 - 2019-4-4
 ### New Scaffolding Commands and Language Features!
