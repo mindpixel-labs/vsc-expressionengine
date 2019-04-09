@@ -56,21 +56,12 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 <sub>EE: Create Template Variable</sub> | <sub>Input requesting a template variable name. Outputs to your `_variables` directory.</sub>|
 <sub>EE: Create Template Partial</sub>| <sub>Input requesting a template partial name. Outputs to your `_partials` directory.</sub>|
 
---------------
 
 **Notes:**
-
 When creating template variables or partials you can omit the `.html` extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters. 
 
---------------
-
---------------
-
 **Known Limitations:**
-
 After creating either a template, variable or partial you can still delete it from the sidebar tree in your editor as long as you don't refresh your local site either in the Control Panel or the front-end as this will cause EE to pull the latest files and sync to the database. The best option for deleting or renaming your files is likely best done within the Control Panel.
-
---------------
 
 ## Customizing Colors
 You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
