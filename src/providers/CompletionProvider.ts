@@ -22,7 +22,7 @@ export default class CompletionProvider {
 
           let linePrefix = document.lineAt(position).text.substr(0, position.character);
 
-          if (!linePrefix.endsWith(completion.prefix) && !/^{exp:\w*:?\w*?\s*?}/.test(document.lineAt(position).text)) {
+          if (!linePrefix.endsWith(completion.prefix) && !/^{exp:channel}/.test(document.lineAt(position).text)) {
             return undefined;
           }
 
@@ -31,7 +31,7 @@ export default class CompletionProvider {
           });
         }
       }, ':');
-  
+    
       context.subscriptions.push(channelProvider);
     }
 
