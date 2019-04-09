@@ -75,23 +75,4 @@ export default class ParameterProvider {
     }
 
   }
-
-  public static isWithinTag(prefix:string, document: vscode.TextDocument, position: vscode.Position) {
-    let currentLine = position.line + 1;
-    for (let index = currentLine; index >= 0; index--) {
-      if (document.lineAt(new vscode.Position(index, 0)).text.includes(prefix)){
-        return true;
-      }
-    }
-  }
-
-  public static isOutsideTag(prefix: string, document: vscode.TextDocument, position: vscode.Position) {
-    let currentLine = position.line + 1;
-    for (let index = currentLine; index >= 0; index--) {
-      if (document.lineAt(new vscode.Position(index, 0)).text.includes(prefix)) {
-        return true;
-      }
-    }
-  }
-
 }
