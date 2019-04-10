@@ -1,6 +1,6 @@
 interface CompletionItem {
   prefix: string,
-  items: Array<string>
+  items: string[]
 }
 
 export default CompletionItem;
