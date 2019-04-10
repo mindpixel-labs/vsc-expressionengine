@@ -22,7 +22,6 @@ export default class ParameterProvider {
           let linePrefix = document.lineAt(position).text.substr(0, position.character);
           let currentLineNumber = position.line;
           
-
           let commpletions = completion.items.map((item: string) => {
             let completionItem              = new vscode.CompletionItem(item);
             completionItem.kind             = (vscode.CompletionItemKind.Property);
