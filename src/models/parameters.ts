@@ -7,6 +7,7 @@ import CategoryArchive from './parameters/CategoryArchive';
 import CategoryHeading from './parameters/CategoryHeading';
 import MonthLinks from './parameters/MonthLinks';
 import Calendar from './parameters/Calendar';
+import Form from './parameters/Form';
 
 const Completions: Array<any> = [
   Channel,
@@ -17,7 +18,8 @@ const Completions: Array<any> = [
   CategoryArchive,
   CategoryHeading,
   MonthLinks,
-  Calendar
+  Calendar,
+  Form
 ];
 
 export default Completions;
