@@ -1,10 +1,10 @@
 import CompletionItem from '../interfaces/completion.interface';
 
-const ExpCompletions: CompletionItem = {
-  prefix: 'exp:',
+const ParameterInfo: CompletionItem = {
+  prefix: 'exp:channel:info',
   items: [
     'channel',
   ]
 };
 
-export default ExpCompletions;
+export default ParameterInfo;
