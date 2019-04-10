@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import * as GlobalVariables from '../models/variables/variables.global';
+import * as GlobalVariables from '../models/variables/variables.model';
 
 export default class GlobalVariableProvider {
 
