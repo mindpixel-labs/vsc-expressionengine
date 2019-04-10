@@ -1,7 +1,7 @@
 {
   "{exp:channel:entries channel=\"...\"}": {
     "scope": "html.ee",
-    "prefix": ["entries", "ce"],
+    "prefix": ["ce"],
     "body": [
       "{exp:channel:entries channel=\"$1\"$2}",
       "\t$0",

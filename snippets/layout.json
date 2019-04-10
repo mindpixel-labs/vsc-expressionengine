@@ -21,7 +21,7 @@
   },
   "{layout:(...)}...{/layout:(...)}": {
     "scope": "html.ee",
-    "prefix": ["layout-pair", "lp"],
+    "prefix": ["lp"],
     "body": [
       "{layout:$1}",
       "\t$2",
@@ -30,7 +30,7 @@
   },
   "{layout:set:append name='...'}...{/layout:set:append}": {
     "scope": "html.ee",
-    "prefix": ["layout-append", "la"],
+    "prefix": ["la"],
     "body": "{layout:set:append name='$1'}$2{/layout:set:append}"
   }
 }

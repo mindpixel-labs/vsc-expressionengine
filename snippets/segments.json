@@ -1,17 +1,17 @@
 {
   "segment_{n}": {
     "scope" : "html.ee",
-    "prefix": "segment",
+    "prefix": ["segment"],
     "body": "segment_$1"
   },
-  "segment:{...}": {
+  "segment:{name}": {
     "scope": "html.ee",
-    "prefix": "segment_name",
+    "prefix": "sn",
     "body": "segment:$1"
   },
   "last_segment": {
     "scope": "html.ee",
-    "prefix": "last_segment",
+    "prefix": "ls",
     "body": "last_segment"
   }
 }

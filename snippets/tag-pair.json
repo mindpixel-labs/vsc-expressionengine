@@ -1,7 +1,7 @@
 {
   "{var}...{/var}": {
     "scope": "html.ee",
-    "prefix": ["var-pair", "vp"],
+    "prefix": ["tp"],
     "body": [
       "{$1$2}",
       "\t$3",
