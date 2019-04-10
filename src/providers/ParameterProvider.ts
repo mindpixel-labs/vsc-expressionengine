@@ -16,7 +16,7 @@ export default class ParameterProvider {
     }
 
     for (let completion of Completions.default) {
-      const channelProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
+      const parameterProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 
           let linePrefix = document.lineAt(position).text.substr(0, position.character);
@@ -69,7 +69,7 @@ export default class ParameterProvider {
         }
       }, ' ');
 
-      context.subscriptions.push(channelProvider);
+      context.subscriptions.push(parameterProvider);
     }
 
   }

@@ -6,6 +6,7 @@ import IndentRulesProvider from './providers/IndentRulesProvider';
 import CommandsProvider from './providers/CommandsProvider';
 import CompletionProvider from './providers/CompletionProvider';
 import ParametersProvider from './providers/ParameterProvider';
+import GlobalVariableProvider from './providers/GlobalVariableProvider';
 
 /**
  * Activate
@@ -17,6 +18,7 @@ import ParametersProvider from './providers/ParameterProvider';
 export function activate(context: vscode.ExtensionContext) {
   CompletionProvider.register(context);
   ParametersProvider.register(context);
+  GlobalVariableProvider.register(context);
   IndentRulesProvider.register(context);
   CommandsProvider.register(context);
 }
