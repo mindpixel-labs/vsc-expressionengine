@@ -5,6 +5,7 @@ import PrevEntry from './parameters/PrevEntry';
 import NextEntry from './parameters/NextEntry';
 import CategoryArchive from './parameters/CategoryArchive';
 import CategoryHeading from './parameters/CategoryHeading';
+import MonthLinks from './parameters/MonthLinks';
 
 const Completions: Array<any> = [
   Channel,
@@ -13,7 +14,8 @@ const Completions: Array<any> = [
   PrevEntry,
   NextEntry,
   CategoryArchive,
-  CategoryHeading
+  CategoryHeading,
+  MonthLinks
 ];
 
 export default Completions;
