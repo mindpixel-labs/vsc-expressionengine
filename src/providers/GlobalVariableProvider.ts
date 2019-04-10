@@ -16,7 +16,7 @@ export default class GlobalVariableProvider {
     }
 
     let variables = GlobalVariables.default;
-    let completions: Array<vscode.CompletionItem> = [];
+    let completions: vscode.CompletionItem[] = [];
 
     for (let variable in variables) {
       let completion = new vscode.CompletionItem(variable);
