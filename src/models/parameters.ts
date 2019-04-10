@@ -10,6 +10,7 @@ import Calendar from './parameters/Calendar';
 import Form from './parameters/Form';
 import CommentEntries from './parameters/CommentEntries';
 import CommentForm from './parameters/CommentForm';
+import CommentNotificationLinks from './parameters/CommentNotificationLinks';
 
 const Completions: Array<any> = [
   Channel,
@@ -23,7 +24,8 @@ const Completions: Array<any> = [
   Calendar,
   Form,
   CommentEntries,
-  CommentForm
+  CommentForm,
+  CommentNotificationLinks
 ];
 
 export default Completions;

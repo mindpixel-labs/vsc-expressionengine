@@ -4,7 +4,8 @@ const CommentCompletions: CompletionItem = {
   prefix: 'exp:comment:',
   items: [
     'entries',
-    'form'
+    'form',
+    'notification_links'
   ]
 };
 
