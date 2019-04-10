@@ -80,7 +80,8 @@ You can customize your active color theme by adding the `editor.tokenColorCustom
 View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
 
 ## Development Roadmap
-- Our next major release will include IntelliSense and code completion.
+- Providing code completion packages that can additionally installed for all the major third party add-ons!
+- Add error diagnostics to help prevent templating code errors or catch bugs
 - Improving embedded ExpressionEngine tag syntax highlighting within HTML markup
 
 ## Documentation
