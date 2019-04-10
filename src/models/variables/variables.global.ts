@@ -121,10 +121,25 @@ const GlobalVariables: VariableInterface = {
     description: '',
     snippet: ''
   },
+  path: {
+    hasClosingTag: false,
+    description: '',
+    snippet: 'path=\'$1\''
+  },
   password_max_length: {
     hasClosingTag: false,
     description: '',
     snippet: ''
+  },
+  preload_replace: {
+    hasClosingTag: false,
+    description: '',
+    snippet: 'preload_replace:$1="$2"'
+  },
+  route: {
+    hasClosingTag: false,
+    description: '',
+    snippet: 'route=\'$1\''
   },
   redirect: {
     hasClosingTag: false,
