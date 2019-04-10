@@ -1,6 +1,6 @@
-import CompletionItem from '../interfaces/completion.interface';
+import CompletionItem from '../../interfaces/completion.interface';
 
-const ParameterCategories: CompletionItem = {
+const Categories: CompletionItem = {
   prefix: 'exp:channel:categories',
   items: [
     'backspace',
@@ -20,4 +20,4 @@ const ParameterCategories: CompletionItem = {
   ]
 };
 
-export default ParameterCategories;
+export default Categories;

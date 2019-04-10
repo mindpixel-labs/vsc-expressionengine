@@ -1,4 +1,4 @@
-import CompletionItem from '../interfaces/completion.interface';
+import CompletionItem from '../../interfaces/completion.interface';
 
 const ChannelCompletions: CompletionItem = {
   prefix: 'exp:channel:',

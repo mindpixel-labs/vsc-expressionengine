@@ -1,6 +1,6 @@
-import CompletionItem from '../interfaces/completion.interface';
+import CompletionItem from '../../interfaces/completion.interface';
 
-const ParameterChannel: CompletionItem = {
+const Channel: CompletionItem = {
   prefix: 'exp:channel:entries',
   items: [
     'author_id',
@@ -54,4 +54,4 @@ const ParameterChannel: CompletionItem = {
   ]
 };
 
-export default ParameterChannel;
+export default Channel;

@@ -1,6 +1,6 @@
-import CompletionItem from '../interfaces/completion.interface';
+import CompletionItem from '../../interfaces/completion.interface';
 
-const ParameterPrevEntry: CompletionItem = {
+const PrevEntry: CompletionItem = {
   prefix: 'exp:channel:prev_entry',
   items: [
     'category',
@@ -14,4 +14,4 @@ const ParameterPrevEntry: CompletionItem = {
   ]
 };
 
-export default ParameterPrevEntry;
+export default PrevEntry;

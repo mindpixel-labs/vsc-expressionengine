@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
-import {TemplateModel} from '../../models/templates';
+import { TemplateModel } from '../../models/commands/templates';
 import ValidationService from '../../services/ValidationService';
 import WorkspaceService from '../../services/WorkspaceService';
 

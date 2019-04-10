@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AddonModel } from '../../models/addon';
+import { AddonModel } from '../../models/commands/addon';
 import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
 import FormatService from '../../services/FormatService';
