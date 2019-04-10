@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
 import * as Completions from '../models/completions';
-import CompletionItem from '../interfaces/completion.interface';
 
 export default class CompletionProvider {
 
