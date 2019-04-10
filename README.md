@@ -7,7 +7,7 @@
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting and snippets.
+The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense.
 
 <br>
 
