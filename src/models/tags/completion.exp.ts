@@ -4,6 +4,7 @@ const ExpCompletions: CompletionItem = {
   prefix: 'exp:',
   items: [
     'channel',
+    'comment'
   ]
 };
 

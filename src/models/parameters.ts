@@ -8,6 +8,8 @@ import CategoryHeading from './parameters/CategoryHeading';
 import MonthLinks from './parameters/MonthLinks';
 import Calendar from './parameters/Calendar';
 import Form from './parameters/Form';
+import CommentEntries from './parameters/CommentEntries';
+import CommentForm from './parameters/CommentForm';
 
 const Completions: Array<any> = [
   Channel,
@@ -19,7 +21,9 @@ const Completions: Array<any> = [
   CategoryHeading,
   MonthLinks,
   Calendar,
-  Form
+  Form,
+  CommentEntries,
+  CommentForm
 ];
 
 export default Completions;
