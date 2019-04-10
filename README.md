@@ -82,6 +82,7 @@ View the full list of available [scope names](https://github.com/mindpixel-labs/
 ## Development Roadmap
 - Providing code completion packages that can additionally installed for all the major third party add-ons!
 - Add error diagnostics to help prevent templating code errors or catch bugs
+- Add Fieldtype to the add-on generator command
 - Improving embedded ExpressionEngine tag syntax highlighting within HTML markup
 
 ## Documentation
