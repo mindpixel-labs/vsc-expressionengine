@@ -39,7 +39,7 @@ const GlobalVariables: VariableInterface = {
   current_time: {
     hasClosingTag: false,
     description: '',
-    snippet: ''
+    snippet: 'current_time format="$1"'
   },
   current_query_string: {
     hasClosingTag: false,
@@ -74,7 +74,7 @@ const GlobalVariables: VariableInterface = {
   encode: {
     hasClosingTag: false,
     description: '',
-    snippet: ''
+    snippet: 'encode=\'$1\' title=\'$2\''
   },
   gzip_mode: {
     hasClosingTag: false,
@@ -109,7 +109,7 @@ const GlobalVariables: VariableInterface = {
   layout: {
     hasClosingTag: false,
     description: '',
-    snippet: ''
+    snippet: 'layout="$1"'
   },
   member_group: {
     hasClosingTag: false,
@@ -129,7 +129,7 @@ const GlobalVariables: VariableInterface = {
   redirect: {
     hasClosingTag: false,
     description: '',
-    snippet: ''
+    snippet: 'redirect=\'$1\''
   },
   site_description: {
     hasClosingTag: false,
@@ -169,7 +169,7 @@ const GlobalVariables: VariableInterface = {
   template_edit_date: {
     hasClosingTag: false,
     description: '',
-    snippet: ''
+    snippet: 'template_edit_date format="$1"'
   },
   theme_folder_url: {
     hasClosingTag: false,
