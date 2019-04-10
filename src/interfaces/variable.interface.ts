@@ -1,6 +1,8 @@
 interface VariableInterface {
   [key: string]: {
-    [key: string]: any
+    hasClosingTag: boolean
+    description: string
+    snippet: string
   }
 }
 
