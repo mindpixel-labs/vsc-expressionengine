@@ -14,9 +14,9 @@ The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-addon.gif)
 
-### Snippets and Syntax Highlighting
+### IntelliSense and Syntax Highlighting
 
-![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax-snippets.gif)
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.2.0/docs/images/vsc-ee-syntax-snippets.gif)
 
 </div>
 
