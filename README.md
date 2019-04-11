@@ -9,8 +9,6 @@
 
 The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense.
 
-<br>
-
 ### Generate Add-ons
 
 
@@ -23,16 +21,8 @@ The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with
 </div>
 
 ## Getting Started
-Make sure to update your user **settings.json** to include the extensions language identifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
 
-```javascript
-    "emmet.includeLanguages": {
-        "ee": "html"
-    }
-```
-
-## Setup ExpressionEngine Paths
-By default, this extension assumes the directory to your add-ons and template files will be based on a fresh install of an ExpressionEngine site.
+**Step 1:** Setup your ExpressionEngine paths. By default, this extension assumes the directory to your add-ons and template files will be based on a fresh install of an ExpressionEngine site.
 
 **Example:** `<project-directory>/system/user/**`
 
@@ -44,7 +34,16 @@ If you have changed your projects directory structure you have the option to ove
 
 The above example would resolve to something like: `/Users/your-name/sites/my-site/system/user`
 
-**Note:** Only one workspace is supported at this time.
+&#x1F4D8; **Note:** Only one workspace is supported at this time. In order to run commands properly, you will need to open additional sites within seperate windows.
+
+
+**Step 2:** Make sure to update your user **settings.json** to include the extensions language identifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
+
+```javascript
+    "emmet.includeLanguages": {
+        "ee": "html"
+    }
+```
 
 ## Commands
 All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appears long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
@@ -56,11 +55,13 @@ All commands start within the `EE` namespace. Visual Studio Code will however co
 <sub>EE: Create Template Variable</sub> | <sub>Input requesting a template variable name. Outputs to your `_variables` directory.</sub>|
 <sub>EE: Create Template Partial</sub>| <sub>Input requesting a template partial name. Outputs to your `_partials` directory.</sub>|
 
+<br>
 
-**Note:**
+
+&#x1F4D8; **Note:**
 When creating template variables or partials you can omit the `.html` extension as this will be automatically appended for you. You only need to provide a name that matches the allowed characters. 
 
-**Known Limitations:**
+&#x1F53A; **Known Limitations:**
 After creating either a template, variable or partial you can still delete it from the sidebar tree in your editor as long as you don't refresh your local site either in the Control Panel or the front-end as this will cause EE to pull the latest files and sync to the database. The best option for deleting or renaming your files is likely best done within the Control Panel.
 
 ## Customizing Colors
