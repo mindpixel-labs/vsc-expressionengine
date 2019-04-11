@@ -23,7 +23,7 @@
 			"patterns": [
 				{
 					"include": "#comment"
-				},
+        },
 				{
 					"include": "#conditionals-tags-elseif"
 				},
@@ -32,7 +32,10 @@
 				},
 				{
 					"include": "#conditionals-tags-opening-closing"
-				},
+        },
+        {
+          "include": "#variable"
+        },
 				{
 					"include": "#layout-set-tag"
 				},
@@ -123,7 +126,7 @@
       "end": "}",
       "captures": {
       	"1": {
-      		"name": "support.function.construct.begin.ee"
+      		"name": "entity.name.tag.ee"
       	},
       	"2": {
       		"name": "text.html.ee"
@@ -236,6 +239,16 @@
 					}
 				}
 			}]
-		}
+    },
+    "variable": {
+      "patterns": [{
+        "match": "{\/?(?!if|\\s)([a-zA-Z:\\?_-]*)}",
+        "captures": {
+          "1": {
+            "name": "entity.name.tag.ee"
+          }
+        }
+      }]
+    }
 	}
 }
