@@ -66,6 +66,11 @@
                     "type": "string",
                     "default": "${workspaceFolder}/system/user/",
                     "description": "The path to your projects user directory"
+                },
+                "ee.suggestCompletions": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "Determines if auto-completion and IntelliSense suggestions will show"
                 }
             }
         },
