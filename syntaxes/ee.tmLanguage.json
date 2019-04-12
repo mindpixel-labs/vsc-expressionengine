@@ -34,7 +34,7 @@
 					"include": "#conditionals-tags-opening-closing"
         },
         {
-          "include": "#variable"
+          "include": "#variable-tag"
         },
 				{
 					"include": "#layout-set-tag"
@@ -240,14 +240,26 @@
 				}
 			}]
     },
-    "variable": {
+    "variable-tag": {
       "patterns": [{
-        "match": "{\/?(?!if|\\s)([a-zA-Z:\\?_-]*)}",
+        "begin": "{/?([:\\w]+)",
+        "end": "}",
         "captures": {
           "1": {
             "name": "entity.name.tag.ee"
           }
-        }
+        },
+				"patterns": [
+				  {
+				    "include": "#double-quotes"
+				  },
+				  {
+				    "include": "#single-quotes"
+				  },
+				  {
+				    "include": "#tag-parameter"
+				  }
+				]
       }]
     }
 	}
