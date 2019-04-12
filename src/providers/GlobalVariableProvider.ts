@@ -16,7 +16,7 @@ export default class GlobalVariableProvider {
       return;
     }
 
-    // Disable suggestions if the user has turn them off
+    // Disable suggestions if the user has turned them off
     if (!ConfigService.suggestionsEnabled()) {
       return Promise.resolve([]);
     } 

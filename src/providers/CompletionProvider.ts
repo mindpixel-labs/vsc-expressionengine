@@ -16,17 +16,20 @@ export default class CompletionProvider {
       return;
     }
 
-    // Disable suggestions if the user has turn them off
+    // Disable suggestions if the user has turned them off
     if (!ConfigService.suggestionsEnabled()) {
       return Promise.resolve([]);
     } 
 
+    // Iterate over the completions and build as needed
     for (let completion of Completions.default) {
       const channelProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-
+          
+          // Get the text at the cursor position
           let linePrefix = document.lineAt(position).text.substr(0, position.character);
 
+          // If the line does not end with the prefix and the line does not contain the prefix return
           if (!linePrefix.endsWith(completion.prefix) && !/^{exp:channel}/.test(document.lineAt(position).text)) {
             return undefined;
           }

@@ -16,11 +16,12 @@ export default class ParameterProvider {
       return;
     }
 
-    // Disable suggestions if the user has turn them off
+    // Disable suggestions if the user has turned them off
     if (!ConfigService.suggestionsEnabled()) {
       return Promise.resolve([]);
     } 
 
+    // Iterate over the completions and build as needed
     for (let completion of Completions.default) {
       const parameterProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
