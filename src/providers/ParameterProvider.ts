@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import * as Completions from '../models/parameters';
+import ConfigService from '../services/ConfigService';
 
 export default class ParameterProvider {
 
@@ -14,6 +15,11 @@ export default class ParameterProvider {
       vscode.window.showErrorMessage('A context was not provided to the registration method.');
       return;
     }
+
+    // Disable suggestions if the user has turn them off
+    if (!ConfigService.suggestionsEnabled()) {
+      return Promise.resolve([]);
+    } 
 
     for (let completion of Completions.default) {
       const parameterProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {

@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import * as GlobalVariables from '../models/variables/variables.model';
+import ConfigService from '../services/ConfigService';
 
 export default class GlobalVariableProvider {
 
@@ -14,6 +15,11 @@ export default class GlobalVariableProvider {
       vscode.window.showErrorMessage('A context was not provided to the registration method.');
       return;
     }
+
+    // Disable suggestions if the user has turn them off
+    if (!ConfigService.suggestionsEnabled()) {
+      return Promise.resolve([]);
+    } 
 
     // The global ExpressionEngine variables
     let variables = GlobalVariables.default;
