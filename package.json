@@ -4,9 +4,9 @@
     "description": "The ultimate ExpressionEngine CMS extension for Visual Studio Code with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense.",
     "publisher": "mindpixel-labs",
     "author": {
-      "name": "Anthony Pinskey"
+        "name": "Anthony Pinskey"
     },
-    "version": "1.1.5",
+    "version": "2.0.0",
     "license": "MIT",
     "icon": "docs/images/vsc-ee-icon.png",
     "engines": {
@@ -68,9 +68,9 @@
                     "description": "The path to your projects user directory"
                 },
                 "ee.suggestCompletions": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Determines if auto-completion and IntelliSense suggestions will show"
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Determines if auto-completion and IntelliSense suggestions will show"
                 }
             }
         },
