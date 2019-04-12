@@ -16,7 +16,7 @@ The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with
 
 ### IntelliSense and Syntax Highlighting
 
-![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/release/1.2.0/docs/images/vsc-ee-syntax-snippets.gif)
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-syntax-snippets.gif)
 
 </div>
 
@@ -46,7 +46,7 @@ The above example would resolve to something like: `/Users/your-name/sites/my-si
 ```
 
 ## Commands
-All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appears long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
+All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appear long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
 
 | Command | Description |
 |--- | --- |
@@ -79,6 +79,28 @@ You can customize your active color theme by adding the `editor.tokenColorCustom
 ```
 
 View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
+
+## Settings
+This extension contributes the following variables to the [settings](https://code.visualstudio.com/docs/getstarted/settings):
+
+- `ee.userPath`: the path to your sites user directory. Defaults to `system/user/`.
+
+- `ee.suggestCompletions`: enable/disable IntelliSense/auto-completion. Is enabled by default.
+
+## Snippets
+Here is a list of the most useful snippets to help you quickly setup your templates.
+
+| Description | Trigger | Completion |
+|--- | --- | --- |
+Tag Pair | <sub>tp</sub> | Generates a tag pair {$1 $2} {/$1} |
+Conditional If | <sub>if</sub> | Generates a condtional tag pair {$if $1} {/if} |
+Conditional Else If | <sub>elseif</sub> | {if:elseif $1} |
+Conditional Else | <sub>else</sub> | {if:else} |
+Pagination Links | <sub>pl</sub> | {paginate}{pagination_links}{/paginate}|
+Pagination Pair | <sub>pp</sub> | Generates a full template of pagination variables. See [example](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Pagination#paginate-pair).|
+
+&#x1F4D8; **Note:** The $1 symbol denotes where the cursor position will be placed when the snippet is triggered and the next steps as you tab through.
+
 
 ## Development Roadmap
 - Providing code completion packages that can additionally installed for all the major third party add-ons!

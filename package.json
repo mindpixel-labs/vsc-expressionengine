@@ -119,19 +119,7 @@
         "snippets": [
             {
                 "language": "ee",
-                "path": "./snippets/global-variables.json"
-            },
-            {
-                "language": "ee",
                 "path": "./snippets/tag-pair.json"
-            },
-            {
-                "language": "ee",
-                "path": "./snippets/channel-entries.json"
-            },
-            {
-                "language": "ee",
-                "path": "./snippets/categories.json"
             },
             {
                 "language": "ee",
@@ -139,15 +127,7 @@
             },
             {
                 "language": "ee",
-                "path": "./snippets/layout.json"
-            },
-            {
-                "language": "ee",
                 "path": "./snippets/pagination.json"
-            },
-            {
-                "language": "ee",
-                "path": "./snippets/segments.json"
             }
         ]
     }

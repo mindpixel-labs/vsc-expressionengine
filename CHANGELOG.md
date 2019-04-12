@@ -9,8 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### New Features
 - Added new IntelliSense features for code auto-completion!
 - Improved syntax highlighting that now allows standard variables and tag pairs to be colored
+
 ### Fixes
 - Fixed bugs with the HTML tag indenting
+
 ### Deprecations
 - Removed channel entries snippets in favor of the IntelliSense auto-completion
 - Removed keyword snippets in favor of the IntelliSense auto-completion

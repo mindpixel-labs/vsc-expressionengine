@@ -111,6 +111,11 @@ const GlobalVariables: VariableInterface = {
     description: '',
     snippet: 'layout="$1"'
   },
+  last_segment: {
+    hasClosingTag: false,
+    description: '',
+    snippet: ''
+  },
   member_group: {
     hasClosingTag: false,
     description: '',
@@ -155,6 +160,16 @@ const GlobalVariables: VariableInterface = {
     hasClosingTag: false,
     description: '',
     snippet: ''
+  },
+  segment: {
+    hasClosingTag: false,
+    description: '',
+    snippet: 'segment_$1'
+  },
+  "segment:": {
+    hasClosingTag: false,
+    description: '',
+    snippet: 'segment:$1'
   },
   site_url: {
     hasClosingTag: false,
