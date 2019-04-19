@@ -7,15 +7,15 @@ export default class IndentRulesProvider{
   /**
    * Register the language indentation rules
    * Rule #1: beforeText Match an openning tag
-   * Rule #1: afterext Match a closing tag
-   * Rule #2: beforeText Match an opening tag but exclude single tags like <img>
-   * Rule #3: beforeText Match an opening tag that has the closing tag on the next line
+   * Rule #2: afterText Match a closing tag
+   * Rule #3: beforeText Match an opening tag but exclude single tags like <img>
+   * Rule #4: beforeText Match an opening tag that has the closing tag on the next line
   */
   public static register(context?: vscode.ExtensionContext) {
     vscode.languages.setLanguageConfiguration('ee', {
       onEnterRules: [
         {
-          beforeText: />/i,
+          beforeText: /<(?!\/|area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)([a-zA-Z0-9]*)\b[^>]*>$/i,
           afterText: /^(?:\s)?<\/([a-zA-Z_-]*)\s*>/i,
           action: {
             indentAction: vscode.IndentAction.IndentOutdent
@@ -28,7 +28,7 @@ export default class IndentRulesProvider{
           }
         },
         {
-          beforeText: />/i,
+          beforeText: /<[^/]([a-zA-Z0-9]*)\b[^>]*>$/i,
           afterText: /^(?![\s\S])$/i,
           action: {
             indentAction: vscode.IndentAction.Indent
