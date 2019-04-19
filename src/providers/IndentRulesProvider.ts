@@ -22,13 +22,13 @@ export default class IndentRulesProvider{
           }
         },
         {
-          beforeText: /<(?!area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr|)([a-zA-Z]+)+(>|.*?[^?]>)/i,
+          beforeText: /<(?!<\/)(?!area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)([a-zA-Z0-9]*)\b[^>]*>$/i,
           action: {
             indentAction: vscode.IndentAction.Indent
           }
         },
         {
-          beforeText: /<[^/]([a-zA-Z0-9]*)\b[^>]*>$/i,
+          beforeText: /<(?!<\/)(?!area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)([a-zA-Z0-9]*)\b[^>]*>$/i,
           afterText: /^(?![\s\S])$/i,
           action: {
             indentAction: vscode.IndentAction.Indent
