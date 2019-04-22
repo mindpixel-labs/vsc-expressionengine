@@ -37,7 +37,6 @@ const Channel: CompletionItem = {
     'show_future_entries',
     'show_pages',
     'sort',
-    'orderby',
     'start_day',
     'start_on',
     'status',
