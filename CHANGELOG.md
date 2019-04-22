@@ -5,6 +5,9 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 2.0.4 - 2019-4-22
+- Remove duplicate channel entry tag parameter orderby
+
 ## 2.0.3 - 2019-4-19
 - Fixed a bug where if the cursor was at the end of a closing tag would still indent
 
