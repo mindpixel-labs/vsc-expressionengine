@@ -5,6 +5,9 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 2.0.5 - 2019-5-03
+- Fixed issue where dashes in a partial or variable name broke syntax highlighting
+
 ## 2.0.4 - 2019-4-22
 - Remove duplicate channel entry tag parameter orderby
 
