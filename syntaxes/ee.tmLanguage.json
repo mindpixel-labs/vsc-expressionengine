@@ -242,7 +242,7 @@
     },
     "variable-tag": {
       "patterns": [{
-        "begin": "{/?([:\\w]+)",
+        "begin": "{/?([:\\w-]+)",
         "end": "}",
         "captures": {
           "1": {
