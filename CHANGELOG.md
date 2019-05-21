@@ -5,6 +5,13 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 2.1.1 - 2019-5-21
+- Add missing changelog entries
+
+## 2.1.0 - 2019-5-21
+- Add fix for the embed variable that used single quotes instead of double
+- Add back global variable snippets with documentation to allow for snippets to now be triggered properly inside of Emmet snippets and strings
+
 ## 2.0.5 - 2019-5-03
 - Fixed issue where dashes in a partial or variable name broke syntax highlighting
 
