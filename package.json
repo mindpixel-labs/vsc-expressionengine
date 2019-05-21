@@ -6,7 +6,7 @@
     "author": {
         "name": "Anthony Pinskey"
     },
-    "version": "2.0.5",
+    "version": "2.1.0",
     "license": "MIT",
     "icon": "docs/images/vsc-ee-icon.png",
     "engines": {
@@ -118,8 +118,8 @@
         ],
         "snippets": [
             {
-              "language": "ee",
-              "path": "./snippets/global-variables.json"
+                "language": "ee",
+                "path": "./snippets/global-variables.json"
             },
             {
                 "language": "ee",
