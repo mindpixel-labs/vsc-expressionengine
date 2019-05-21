@@ -69,7 +69,7 @@ const GlobalVariables: VariableInterface = {
   embed: {
     hasClosingTag: false,
     description: '',
-    snippet: 'embed=\'$1\''
+    snippet: 'embed="$1"'
   },
   encode: {
     hasClosingTag: false,
