@@ -7,7 +7,7 @@
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense.
+&#x1f680; The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense.
 
 ### Generate Add-ons
 
@@ -34,7 +34,7 @@ If you have changed your projects directory structure you have the option to ove
 
 The above example would resolve to something like: `/Users/your-name/sites/my-site/system/user`
 
-&#x1F4D8; **Note:** Only one workspace is supported at this time. In order to run commands properly, you will need to open additional sites within seperate windows.
+&#x1F4D8; **Note:** Only one workspace is supported at this time. In order to run commands properly, you will need to open additional sites within separate windows.
 
 
 **Step 2:** Make sure to update your user **settings.json** to include the extensions language identifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
@@ -46,7 +46,7 @@ The above example would resolve to something like: `/Users/your-name/sites/my-si
 ```
 
 ## Commands
-All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appear long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
+All commands start within the `EE` namespace. Visual Studio Code will however correctly pull up the commands even if you type it in lowercase. Also, while the full name of the commands appears long, the editor will match shorter typings like `ee addon-on`, `ee partial` etc.
 
 | Command | Description |
 |--- | --- |
@@ -88,7 +88,7 @@ This extension contributes the following variables to the [settings](https://cod
 - `ee.suggestCompletions`: enable/disable IntelliSense/auto-completion. Is enabled by default.
 
 ## Snippets
-Here is a list of the most useful snippets to help you quickly setup your templates.
+Here is a list of the most useful snippets to help you quickly set up your templates.
 
 | Description | Trigger | Completion |
 |--- | --- | --- |
@@ -96,14 +96,31 @@ Tag Pair | <sub>tp</sub> | Generates a tag pair {$1 $2} {/$1} |
 Conditional If | <sub>if</sub> | Generates a condtional tag pair {$if $1} {/if} |
 Conditional Else If | <sub>elseif</sub> | {if:elseif $1} |
 Conditional Else | <sub>else</sub> | {if:else} |
-Pagination Links | <sub>pl</sub> | {paginate}{pagination_links}{/paginate}|
-Pagination Pair | <sub>pp</sub> | Generates a full template of pagination variables. See [example](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Pagination#paginate-pair).|
+Pagination Links | <sub>pl</sub> | {paginate}{pagination_links}{/paginate} |
+Pagination Pair | <sub>pp</sub> | Generates a full template of pagination variables. See [example](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Pagination#paginate-pair). |
+Embed Variable | <sub>embed</sub> | {embed='$1'} |
+Encode Variable | <sub>encode</sub> | {encode="$1" title="$2"} |
+Redirect Variable | <sub>redirect</sub> | {redirect="$1"} |
+Path Variable | <sub>path</sub> | {path='$1'} |
+Route Variable | <sub>route</sub> | {route='$1'} |
 
 &#x1F4D8; **Note:** The $1 symbol denotes where the cursor position will be placed when the snippet is triggered and the next steps as you tab through.
 
+To trigger path and route variables within an anchor tag href string you should add the following to your user settings.json file to allow for IntelliSense in strings. This will provide you with a list of auto-completions.
+
+```javascript
+	"editor.suggest.snippetsPreventQuickSuggestions": false,
+	"editor.tabCompletion": "on",
+	"editor.quickSuggestions": {
+		"comments": false,
+		"other": true,
+		"strings": true
+	},
+```
+
 
 ## Development Roadmap
-- Providing code completion packages that can be additionally installed for all the major third party add-ons!
+- Providing code completion packages that can be additionally installed for all the major third-party add-ons!
 - Add error diagnostics to help prevent templating code errors or catch bugs
 - Add Fieldtype to the add-on generator command
 - Improving embedded ExpressionEngine tag syntax highlighting within HTML markup
