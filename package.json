@@ -118,6 +118,10 @@
         ],
         "snippets": [
             {
+              "language": "ee",
+              "path": "./snippets/global-variables.json"
+            },
+            {
                 "language": "ee",
                 "path": "./snippets/tag-pair.json"
             },
