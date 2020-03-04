@@ -129,7 +129,7 @@ To trigger path and route variables within an anchor tag href string you should 
 View the full [wiki](https://github.com/mindpixel-labs/vsc-expressionengine/wiki) to learn about all the available options.
 
 ## Contributors Welcome!
-This package is still fairly new so if you find a bug or something that could be improved upon, please let us know or submit a PR. Issues and PRs will be reviewed as soon as they can. Your support is very much appreciated!
+If you find a bug or something that could be improved upon, please let us know or submit a PR. Issues and PRs will be reviewed as soon as they can. Your support is very much appreciated!
 
 ## Pull Request Guidelines
 If you are planning to make significant changes to the code or add a major feature, please check the following first:
