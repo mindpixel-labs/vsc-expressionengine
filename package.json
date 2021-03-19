@@ -6,7 +6,7 @@
     "author": {
         "name": "Anthony Pinskey"
     },
-    "version": "2.1.2",
+    "version": "2.1.3",
     "license": "MIT",
     "icon": "docs/images/vsc-ee-icon.png",
     "engines": {
