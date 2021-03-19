@@ -20,5 +20,3 @@ return [
       'namespace'      => '{{NAMESPACE}}',
       'settings_exist' => FALSE
 ];
-
-return $info;
