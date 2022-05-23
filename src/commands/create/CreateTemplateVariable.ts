@@ -1,7 +1,8 @@
 import * as vscode from 'vscode';
+import * as mkdirp from 'mkdirp';
+import * as fs from 'fs';
 import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
-import * as fs from 'fs';
 
 export default class CreateTemplateVariable {
   public static async run() {
@@ -29,11 +30,19 @@ export default class CreateTemplateVariable {
     }
 
     // If everything passed go ahead and create the template and group if needed
-    let userFile = `${templatePath}/_variables/${templateVariableName}.html`;
-    fs.openSync(userFile, 'a');
-    // Open the newly created file within the editor
-    vscode.workspace.openTextDocument(userFile).then(doc => {
-      vscode.window.showTextDocument(doc);
+    let userFile = `${templatePath}/_variables/${templateVariableName}.html`,
+        partialsTemplateGroup = `${templatePath}/_variables/`;
+    mkdirp(partialsTemplateGroup).then((made: any) => {
+      fs.openSync(userFile, 'a');
+      // Open the newly created file within the editor
+      vscode.workspace.openTextDocument(userFile).then(doc => {
+        vscode.window.showTextDocument(doc);
+      });
+    }).catch((error: any) => {
+      if(error) {
+        vscode.window.showWarningMessage(`The template variable could not be created: ${error}`);
+        return false;
+      }
     });
   }
 }

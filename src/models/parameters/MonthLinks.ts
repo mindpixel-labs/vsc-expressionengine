@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const MonthLinks: CompletionItem = {
+const MONTH_LINKS: CompletionItem = {
   prefix: 'exp:channel:month_links',
   items: [
     'channel',
@@ -12,4 +12,4 @@ const MonthLinks: CompletionItem = {
   ]
 };
 
-export default MonthLinks;
+export default MONTH_LINKS;

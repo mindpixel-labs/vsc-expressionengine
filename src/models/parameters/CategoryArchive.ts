@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const CategoryArchive: CompletionItem = {
+const CATEGORY_ARCHIVE: CompletionItem = {
   prefix: 'exp:channel:category_archive',
   items: [
     'backspace',
@@ -18,4 +18,4 @@ const CategoryArchive: CompletionItem = {
   ]
 };
 
-export default CategoryArchive;
+export default CATEGORY_ARCHIVE;

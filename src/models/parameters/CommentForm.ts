@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const CommentForm: CompletionItem = {
+const COMMENT_FORM: CompletionItem = {
   prefix: 'exp:comment:form',
   items: [
     'entry_id',
@@ -13,4 +13,4 @@ const CommentForm: CompletionItem = {
   ]
 };
 
-export default CommentForm;
+export default COMMENT_FORM;

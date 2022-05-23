@@ -133,11 +133,11 @@ export default class ValidationService {
 
     let data = {
       name: value
-    }
+    };
 
     let rules: Validator.Rules = {
       name: 'required|max:50|valid_addon_name|unique_addon',
-    }
+    };
 
     let messages = {
       'required'        : 'You must supply a name.',
@@ -171,11 +171,11 @@ export default class ValidationService {
 
     let data = {
       name: value
-    }
+    };
 
     let rules: Validator.Rules = {
       name: 'required|max:50|valid_group_chars',
-    }
+    };
 
     let messages = {
       'required.name'               : 'You must supply a name.',
@@ -211,7 +211,7 @@ export default class ValidationService {
 
     let rules: Validator.Rules = {
       name: 'required|max:50|valid_group_chars|unique_partial',
-    }
+    };
 
     let messages = {
       'required.name'             : 'You must supply a name.',
@@ -248,7 +248,7 @@ export default class ValidationService {
 
     let rules: Validator.Rules = {
       name: 'required|max:50|valid_group_chars|unique_variable',
-    }
+    };
 
     let messages = {
       'required.name'             : 'You must supply a name.',
@@ -281,11 +281,11 @@ export default class ValidationService {
 
     let data = {
       name: value
-    }
+    };
 
     let rules: Validator.Rules = {
       name: 'required|max:50|valid_file_chars|unique_template',
-    }
+    };
 
     let messages = {
       'required.name'           : 'You must supply a name.',
@@ -317,11 +317,11 @@ export default class ValidationService {
 
     let data = {
       name: value
-    }
+    };
 
     let rules: Validator.Rules = {
       name: 'required|max:50|valid_vendor_name',
-    }
+    };
 
     let messages = {
       'required.name'           : 'You must supply a name.',

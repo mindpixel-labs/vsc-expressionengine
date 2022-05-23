@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const CommentNotificationLinks: CompletionItem = {
+const COMMENT_NOTIFICATION_LINKS: CompletionItem = {
   prefix: 'exp:comment:notification_links',
   items: [
     'entry_id',
@@ -8,4 +8,4 @@ const CommentNotificationLinks: CompletionItem = {
   ]
 };
 
-export default CommentNotificationLinks;
+export default COMMENT_NOTIFICATION_LINKS;

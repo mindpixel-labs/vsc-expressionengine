@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const CategoryHeading: CompletionItem = {
+const CATEGORY_HEADING: CompletionItem = {
   prefix: 'exp:channel:category_heading',
   items: [
     'disable',
@@ -9,4 +9,4 @@ const CategoryHeading: CompletionItem = {
   ]
 };
 
-export default CategoryHeading;
+export default CATEGORY_HEADING;

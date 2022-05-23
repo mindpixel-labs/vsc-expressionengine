@@ -23,7 +23,7 @@ export default class ParameterProvider {
 
     // Iterate over the completions and build as needed
     for (let completion of Completions.default) {
-      const parameterProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
+      const parameterProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'html' }, {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 
           let linePrefix = document.lineAt(position).text.substr(0, position.character);

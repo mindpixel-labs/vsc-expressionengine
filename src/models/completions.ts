@@ -1,11 +1,11 @@
-import ExpCompletions from './tags/completion.exp';
-import ChannelCompletions from './tags/completion.channel';
-import CommentCompletions from './tags/completion.comment';
+import expCompletions from './tags/completion.exp';
+import channelCompletions from './tags/completion.channel';
+import commentCompletions from './tags/completion.comment';
 
-const Completions:Array<any> = [
-  ExpCompletions,
-  ChannelCompletions,
-  CommentCompletions
+const COMPLETIONS:Array<any> = [
+  expCompletions,
+  channelCompletions,
+  commentCompletions
 ];
 
-export default Completions;
+export default COMPLETIONS;

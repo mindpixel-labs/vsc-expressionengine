@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AddonModel } from '../../models/commands/addon';
+import { addonModel } from '../../models/commands/addon';
 import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
 import FormatService from '../../services/FormatService';
@@ -22,7 +22,7 @@ export default class CreateAddon {
     templateToCopy        : string = '';
 
     // Show selection list for user to choose their add-on type
-    let selection = await vscode.window.showQuickPick(AddonModel, { canPickMany: false }),
+    let selection = await vscode.window.showQuickPick(addonModel, { canPickMany: false }),
         addonType : string = '';
 
     // Ensure the user input is not empty
@@ -74,10 +74,10 @@ export default class CreateAddon {
     addonDir = WorkspaceService.getUserDirectory(`addons/${addonName.toLowerCase()}`);
 
     // Get the extension object
-    const Extension = vscode.extensions.getExtension('mindpixel-labs.vsc-expressionengine');
+    const EXTENSION = vscode.extensions.getExtension('mindpixel-labs.vsc-expressionengine');
 
-    if(Extension !== undefined) {
-      templateToCopy = path.join(Extension.extensionPath, `templates/${addonType.toLowerCase()}`);
+    if(EXTENSION !== undefined) {
+      templateToCopy = path.join(EXTENSION.extensionPath, `templates/${addonType.toLowerCase()}`);
     }
 
     // Template variables

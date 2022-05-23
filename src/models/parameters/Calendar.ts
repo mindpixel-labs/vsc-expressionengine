@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const Calendar: CompletionItem = {
+const CALENDAR: CompletionItem = {
   prefix: 'exp:channel:calendar',
   items: [
     'leading_zeroes',
@@ -12,4 +12,4 @@ const Calendar: CompletionItem = {
   ]
 };
 
-export default Calendar;
+export default CALENDAR;

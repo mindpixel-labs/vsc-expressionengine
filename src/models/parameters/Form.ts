@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const Form: CompletionItem = {
+const FORM: CompletionItem = {
   prefix: 'exp:channel:form',
   items: [
     'allow_comments',
@@ -33,4 +33,4 @@ const Form: CompletionItem = {
   ]
 };
 
-export default Form;
+export default FORM;

@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const Categories: CompletionItem = {
+const CATEGORIES: CompletionItem = {
   prefix: 'exp:channel:categories',
   items: [
     'backspace',
@@ -20,4 +20,4 @@ const Categories: CompletionItem = {
   ]
 };
 
-export default Categories;
+export default CATEGORIES;

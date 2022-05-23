@@ -23,9 +23,5 @@ export function activate(context: vscode.ExtensionContext) {
   CommandsProvider.register(context);
 }
 
-/**
- * Deactive
- * 
- * Method is called when your extension is deactivated
- */
+// this method is called when your extension is deactivated
 export function deactivate() {}

@@ -1,31 +1,31 @@
-import Channel from './parameters/Channel';
-import Categories from './parameters/Categories';
-import Info from './parameters/Info';
-import PrevEntry from './parameters/PrevEntry';
-import NextEntry from './parameters/NextEntry';
-import CategoryArchive from './parameters/CategoryArchive';
-import CategoryHeading from './parameters/CategoryHeading';
-import MonthLinks from './parameters/MonthLinks';
-import Calendar from './parameters/Calendar';
-import Form from './parameters/Form';
-import CommentEntries from './parameters/CommentEntries';
-import CommentForm from './parameters/CommentForm';
-import CommentNotificationLinks from './parameters/CommentNotificationLinks';
+import CHANNEL from './parameters/Channel';
+import CATEGORIES from './parameters/Categories';
+import INFO from './parameters/Info';
+import PREV_ENTRY from './parameters/PrevEntry';
+import NEXT_ENTRY from './parameters/NextEntry';
+import CATEGORY_ARCHIVE from './parameters/CategoryArchive';
+import CATEGORY_HEADING from './parameters/CategoryHeading';
+import MONTH_LINKS from './parameters/MonthLinks';
+import CALENDAR from './parameters/Calendar';
+import FORM from './parameters/Form';
+import COMMENT_ENTRIES from './parameters/CommentEntries';
+import COMMENT_FORM from './parameters/CommentForm';
+import COMMENT_NOTIFICATION_LINKS from './parameters/CommentNotificationLinks';
 
-const Completions: Array<any> = [
-  Channel,
-  Categories,
-  Info,
-  PrevEntry,
-  NextEntry,
-  CategoryArchive,
-  CategoryHeading,
-  MonthLinks,
-  Calendar,
-  Form,
-  CommentEntries,
-  CommentForm,
-  CommentNotificationLinks
+const completions: Array<any> = [
+  CHANNEL,
+  CATEGORIES,
+  INFO,
+  PREV_ENTRY,
+  NEXT_ENTRY,
+  CATEGORY_ARCHIVE,
+  CATEGORY_HEADING,
+  MONTH_LINKS,
+  CALENDAR,
+  FORM,
+  COMMENT_ENTRIES,
+  COMMENT_FORM,
+  COMMENT_NOTIFICATION_LINKS
 ];
 
-export default Completions;
+export default completions;

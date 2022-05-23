@@ -1,6 +1,6 @@
 import { QuickPickItem } from "vscode";
 
-const AddonModel:QuickPickItem[] = [
+const addonModel: QuickPickItem[] = [
   {
     label: 'Extension',
     description: 'Creates boilerplate for an extension'
@@ -16,5 +16,5 @@ const AddonModel:QuickPickItem[] = [
 ];
 
 export {
-  AddonModel
-}
+  addonModel
+};

@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const NextEntry: CompletionItem = {
+const NEXT_ENTRY: CompletionItem = {
   prefix: 'exp:channel:next_entry',
   items: [
     'category',
@@ -14,4 +14,4 @@ const NextEntry: CompletionItem = {
   ]
 };
 
-export default NextEntry;
+export default NEXT_ENTRY;

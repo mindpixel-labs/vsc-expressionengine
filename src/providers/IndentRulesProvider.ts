@@ -12,7 +12,7 @@ export default class IndentRulesProvider{
    * Rule #4: beforeText Match an opening tag that has the closing tag on the next line
   */
   public static register(context?: vscode.ExtensionContext) {
-    vscode.languages.setLanguageConfiguration('ee', {
+    vscode.languages.setLanguageConfiguration('html', {
       onEnterRules: [
         {
           beforeText: /<(?!\/|area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)([a-zA-Z0-9]*)\b[^>]*>$/i,

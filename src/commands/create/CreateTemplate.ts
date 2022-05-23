@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
-import { TemplateModel } from '../../models/commands/templates';
+import { templateModel } from '../../models/commands/templates';
 import ValidationService from '../../services/ValidationService';
 import WorkspaceService from '../../services/WorkspaceService';
 
@@ -24,7 +24,7 @@ export default class CreateTemplate {
 
     // Set the workspace folder
     let templateTypeSelection = await vscode.window.showQuickPick(
-      TemplateModel, {
+      templateModel, {
         canPickMany: false
       }
     );
@@ -72,12 +72,7 @@ export default class CreateTemplate {
     let userTemplateGroup = `${templatePath}/${templateGroupName}.group`;
     
     // If everything passed go ahead and create the template and group if needed
-    mkdirp(userTemplateGroup, function (error) {
-
-      if(error) {
-        vscode.window.showWarningMessage(`The template could not be created: ${error}`);
-        return false;
-      }
+    mkdirp(userTemplateGroup).then((made) => {
       
       // Create file
       fs.openSync(userFile, 'a');
@@ -86,7 +81,11 @@ export default class CreateTemplate {
       vscode.workspace.openTextDocument(userFile).then(doc => {
         vscode.window.showTextDocument(doc);
       });
-
+    }).catch((error: any) => {
+      if(error) {
+        vscode.window.showWarningMessage(`The template could not be created: ${error}`);
+        return false;
+      }
     });
   }
 }

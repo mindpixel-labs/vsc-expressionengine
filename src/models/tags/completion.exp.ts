@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const ExpCompletions: CompletionItem = {
+const expCompletions: CompletionItem = {
   prefix: 'exp:',
   items: [
     'channel',
@@ -8,4 +8,4 @@ const ExpCompletions: CompletionItem = {
   ]
 };
 
-export default ExpCompletions;
+export default expCompletions;

@@ -23,11 +23,11 @@ export default class CompletionProvider {
 
     // Iterate over the completions and build as needed
     for (let completion of Completions.default) {
-      const channelProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
+      const channelProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'html' }, {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
           
           // Get the text at the cursor position
-          let linePrefix = document.lineAt(position).text.substr(0, position.character);
+          let linePrefix = document.lineAt(position).text.substring(0, position.character);
 
           // If the line does not end with the prefix and the line does not contain the prefix return
           if (!linePrefix.endsWith(completion.prefix) && !/^{exp:channel}/.test(document.lineAt(position).text)) {

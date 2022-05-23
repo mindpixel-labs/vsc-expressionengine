@@ -20,7 +20,7 @@ export function directoryExists(path: string) {
   if (!fs.existsSync(path)) {
     return false;
   } else {
-    return true
+    return true;
   }
 };
 

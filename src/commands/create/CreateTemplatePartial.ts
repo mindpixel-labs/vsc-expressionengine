@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import * as mkdirp from 'mkdirp';
 import * as fs from 'fs';
 import WorkspaceService from '../../services/WorkspaceService';
 import ValidationService from '../../services/ValidationService';
@@ -28,11 +29,20 @@ export default class CreateTemplatePartial {
     }
 
     // If everything passed go ahead and create the template partial
-    let userFile = `${templatePath}/_partials/${templatePatialName}.html`;
-    fs.openSync(userFile, 'a');
-    // Open the newly created file within the editor
-    vscode.workspace.openTextDocument(userFile).then(doc => {
-      vscode.window.showTextDocument(doc);
+    let userFile = `${templatePath}/_partials/${templatePatialName}.html`,
+        partialsTemplateGroup = `${templatePath}/_partials/`;
+
+    mkdirp(partialsTemplateGroup).then((made: any) => {
+      fs.openSync(userFile, 'a');
+      // Open the newly created file within the editor
+      vscode.workspace.openTextDocument(userFile).then(doc => {
+        vscode.window.showTextDocument(doc);
+      });
+    }).catch((error: any) => {
+      if(error) {
+        vscode.window.showWarningMessage(`The template partial could not be created: ${error}`);
+        return false;
+      }
     });
   }
 }

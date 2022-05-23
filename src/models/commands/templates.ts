@@ -1,6 +1,6 @@
 import { QuickPickItem } from "vscode";
 
-const TemplateModel:QuickPickItem[] = [
+const templateModel:QuickPickItem[] = [
   {
     label: '.html',
     description: 'Creates a webpage template type'
@@ -24,5 +24,5 @@ const TemplateModel:QuickPickItem[] = [
 ];
 
 export {
-  TemplateModel
-}
+  templateModel
+};

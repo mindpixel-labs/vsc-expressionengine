@@ -42,7 +42,7 @@ export default class GlobalVariableProvider {
     }
 
     // Create the provider
-    const variableProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'ee' }, {
+    const variableProvider = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'html' }, {
       provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
         
         // Grab the current line where the trigger was invoked and trim all white space

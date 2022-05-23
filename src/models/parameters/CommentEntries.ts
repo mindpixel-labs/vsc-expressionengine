@@ -1,6 +1,6 @@
 import CompletionItem from '../../interfaces/completion.interface';
 
-const CommentEntries: CompletionItem = {
+const COMMENT_ENTRIES: CompletionItem = {
   prefix: 'exp:comment:entries',
   items: [
     'author_id',
@@ -20,4 +20,4 @@ const CommentEntries: CompletionItem = {
   ]
 };
 
-export default CommentEntries;
+export default COMMENT_ENTRIES;

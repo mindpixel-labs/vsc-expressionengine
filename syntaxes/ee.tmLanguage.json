@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "ExpressionEngine",
-	"scopeName": "text.html.ee",
+	"name": "expressionengine-html",
+	"scopeName": "text.ee.html",
 	"patterns": [
 		{
 			"include": "text.html.basic"
@@ -129,7 +129,7 @@
       		"name": "entity.name.tag.ee"
       	},
       	"2": {
-      		"name": "text.html.ee"
+      		"name": "text.ee.html"
       	},
       	"3": {
       		"name": "support.function.construct.begin.ee"
@@ -152,7 +152,7 @@
 			"patterns": [{
 				"begin": "({/?)",
 				"end": "(})",
-				"name": "text.html.ee",
+				"name": "text.ee.html",
 				"patterns": [
 					{
 						"include": "#module-tags"
