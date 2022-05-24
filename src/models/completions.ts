@@ -5,7 +5,7 @@ import commentCompletions from './tags/completion.comment';
 const COMPLETIONS:Array<any> = [
   expCompletions,
   channelCompletions,
-  commentCompletions
+  commentCompletions,
 ];
 
 export default COMPLETIONS;
