@@ -12,6 +12,7 @@ import FORM from './parameters/Form';
 import COMMENT_ENTRIES from './parameters/CommentEntries';
 import COMMENT_FORM from './parameters/CommentForm';
 import COMMENT_NOTIFICATION_LINKS from './parameters/CommentNotificationLinks';
+import LAYOUT_SET from './parameters/LayoutSet';
 // Variable Modifier Parameters
 import ATTR_SAFE from './parameters/AttrSafe';
 import CURRRENCY from './parameters/Currency';
@@ -51,7 +52,8 @@ const completions: Array<any> = [
   SPELLOUT,
   TRIM,
   URL_ENCODE,
-  URL_SLUG
+  URL_SLUG,
+  LAYOUT_SET
 ];
 
 export default completions;

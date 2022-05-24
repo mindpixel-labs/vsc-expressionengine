@@ -29,7 +29,7 @@ export default class CompletionProvider {
           let linePrefix = document.lineAt(position).text.substring(0, position.character);
 
           // Ensure the line does not contain any native EE tags
-          if ( /({)(if|exp|channel|entries).*(})$/g.test(document.lineAt(position).text.trim()) ) {
+          if ( /({)(if|layout|layout:set|exp|channel|entries).*(})$/g.test(document.lineAt(position).text.trim()) ) {
             return undefined;
           }
 
