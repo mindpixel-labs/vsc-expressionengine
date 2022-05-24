@@ -4,10 +4,12 @@
 # vsc-expressionengine
 ![](https://img.shields.io/badge/Status-Maintained-brightgreen.svg)
 ![](https://img.shields.io/visual-studio-marketplace/v/mindpixel-labs.vsc-expressionengine.svg?color=brightgreen&label=Visual%20Studio%20Marketplace&logo=Visual%20Studio%20Code)
+![](https://badgen.net/vs-marketplace/i/mindpixel-labs.vsc-expressionengine)
+![](https://badgen.net/vs-marketplace/d/mindpixel-labs.vsc-expressionengine)
 ![](https://img.shields.io/github/issues/mindpixel-labs/vsc-expressionengine.svg)
 ![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-&#x1f680; The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense. Now with updated EE6 support!
+&#x1f680; The ultimate **ExpressionEngine CMS** extension for Visual Studio Code <br> with scaffolding commands to generate add-ons and template files, syntax highlighting, snippets and IntelliSense. Now with updated **EE6** support!
 
 ### Generate Add-ons
 
