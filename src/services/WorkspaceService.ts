@@ -13,7 +13,7 @@ export default class WorkspaceService {
     let workspaceFolder: string = '';
 
     if (vscode.workspace.workspaceFolders !== undefined) {
-      workspaceFolder = vscode.workspace.workspaceFolders[0].uri.path;
+      workspaceFolder = vscode.workspace.workspaceFolders[0].uri.fsPath;
     }
       return workspaceFolder;
   }
@@ -28,7 +28,8 @@ export default class WorkspaceService {
         config = vscode.workspace.getConfiguration('ee');
 
     if (vscode.workspace.workspaceFolders !== undefined) {
-      workspaceFolder = vscode.workspace.workspaceFolders[0].uri.path;
+      console.log(vscode.workspace.workspaceFolders[0].uri.fsPath);
+      workspaceFolder = vscode.workspace.workspaceFolders[0].uri.fsPath;
     }
 
     // Set the directory and replace any trailing forward slashes
@@ -46,7 +47,7 @@ export default class WorkspaceService {
     let config = vscode.workspace.getConfiguration('ee');
 
     if (vscode.workspace.workspaceFolders !== undefined) {
-      workspaceFolder = vscode.workspace.workspaceFolders[0].uri.path;
+      workspaceFolder = vscode.workspace.workspaceFolders[0].uri.fsPath;
     }
 
     return this.getUserDirectory('templates/default_site');
