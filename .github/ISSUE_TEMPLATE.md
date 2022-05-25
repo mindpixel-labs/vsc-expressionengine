@@ -3,7 +3,7 @@
 * Have you tried to reproduce the problem in with the extension disabled?
 * Have you checked that your issue [isn't already filed][already-filed]?
 
-[already-filed]: https://github.com/mindpixel-labs//vsc-expressionengine/issues
+[already-filed]: https://github.com/mindpixel-labs/vsc-expressionengine/issues
 
 ### Description
 
