@@ -1,6 +1,8 @@
 <br>
 <div align="center">
 
+![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-icon.png)
+
 # vsc-expressionengine
 ![](https://img.shields.io/badge/Status-Maintained-brightgreen.svg)
 ![](https://img.shields.io/visual-studio-marketplace/v/mindpixel-labs.vsc-expressionengine.svg?color=brightgreen&label=Visual%20Studio%20Marketplace&logo=Visual%20Studio%20Code)
@@ -14,7 +16,6 @@
 &#10024; Now with updated **EE6** support!
 
 ### Generate Add-ons
-
 
 ![](https://raw.githubusercontent.com/mindpixel-labs/vsc-expressionengine/master/docs/images/vsc-ee-addon.gif)
 
