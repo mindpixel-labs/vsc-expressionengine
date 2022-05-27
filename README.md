@@ -45,9 +45,9 @@ The above example would resolve to something like: `/Users/your-name/sites/my-si
 **Step 2:** Make sure to update your user **settings.json** to include the extensions language identifier for both ExpressionEngine and HTML files so that Emmet can autocomplete properly.
 
 ```javascript
-    "emmet.includeLanguages": {
-        "ee": "html"
-    }
+  "emmet.includeLanguages": {
+    "ee": "html"
+  }
 ```
 
 ## Commands
@@ -73,14 +73,14 @@ After creating either a template, variable or partial you can still delete it fr
 You can customize your active color theme by adding the `editor.tokenColorCustomizations` property to your **settings.json**.
 
 ```javascript
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [{
-            "scope": "entity.name.tag.ee",
-            "settings": {
-                "foreground": "#B67FFF"
-            }
-        }]
+"editor.tokenColorCustomizations": {
+  "textMateRules": [{
+    "scope": "entity.name.tag.ee",
+    "settings": {
+      "foreground": "#B67FFF"
     }
+  }]
+}
 ```
 
 View the full list of available [scope names](https://github.com/mindpixel-labs/vsc-expressionengine/wiki/Scope-Names) to override.
@@ -114,13 +114,13 @@ Route Variable | <sub>route</sub> | {route='$1'} |
 To trigger path and route variables within an anchor tag href string you should add the following to your user settings.json file to allow for IntelliSense in strings. This will provide you with a list of auto-completions.
 
 ```javascript
-	"editor.suggest.snippetsPreventQuickSuggestions": false,
-	"editor.tabCompletion": "on",
-	"editor.quickSuggestions": {
-		"comments": false,
-		"other": true,
-		"strings": true
-	},
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestions": {
+    "comments": false,
+    "other": true,
+    "strings": true
+  },
 ```
 
 
