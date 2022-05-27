@@ -34,10 +34,10 @@
 If you have changed your projects directory structure you have the option to override this within your user **settings.json** file. Just include the **${workspaceFolder}** variable at the beginning of your definition so the project's path you currently have open within the workspace will be dynamically resolved.
 
 ```javascript
-  "ee.userPath" : "${workspaceFolder}/system/user"
+  "ee.userPath" : "${workspaceFolder}/renamed-system-folder/user"
 ```
 
-The above example would resolve to something like: `/Users/your-name/sites/my-site/system/user`
+The above example would resolve to something like: `/Users/your-name/sites/my-site/renamed-system-folder/user`
 
 &#x1F4D8; **Note:** Only one workspace is supported at this time. In order to run commands properly, you will need to open additional sites within separate windows.
 
