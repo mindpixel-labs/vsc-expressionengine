@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add new IntelliSense for Variable Modifiers
 - Add new Intellisense for the layout tag
 - Update README.md with new text and badges
-- 
 
 ## 2.1.3 - 2021-3-19
 - Updated extension template files and removed extra return that was not needed
