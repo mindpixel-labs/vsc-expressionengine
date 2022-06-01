@@ -5,6 +5,14 @@ All notable changes to the "vsc-expressionengine" extension will be documented i
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 3.0.0 - 2022-6-01
+- Fix issue that caused incorrect path generation on Windows platforms
+- Add upgraded dependencies
+- Add new IntelliSense for Variable Modifiers
+- Add new Intellisense for the layout tag
+- Update README.md with new text and badges
+- 
+
 ## 2.1.3 - 2021-3-19
 - Updated extension template files and removed extra return that was not needed
 
